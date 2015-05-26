@@ -119,10 +119,10 @@
                 <div class="slide">
                     <div class="wrapper">
                         <div class="row">
+                            <div class="col one-of-two"><img src="assets/images/print/NYAS/strongstudio_print_nyas_brochure.png"></div>
                             <div class="col one-of-two">
                                 <span class="vertical_aligner"><img src="assets/images/print/NYAS/strongstudio_print_nyas_un-invite.png"></span>
                             </div>
-                            <div class="col one-of-two"><img src="assets/images/print/NYAS/strongstudio_print_nyas_brochure.png"></div>
                         </div>
                     </div>
                 </div>
@@ -195,13 +195,13 @@
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script>
         $(document).ready(function() {
-            var $body = $('body');
-            var $mainNav = $('#main-nav');
-            var $toggleButton = $('#toggle-button');
-            var $navLinks = $('#menu').find('a');
-            var $downArrow = $('#down-arrow');
-            var sections = document.getElementsByClassName('section');
-
+            var $window = $(window),
+                $body = $('body'),
+                $mainNav = $('#main-nav'),
+                $toggleButton = $('#toggle-button'),
+                $navLinks = $('#menu').find('a'),
+                $downArrow = $('#down-arrow'),
+                sections = document.getElementsByClassName('section');
 
             $('#fullpage').fullpage({
                 navigation: false,
@@ -210,27 +210,11 @@
                 scrollingSpeed: 500,
 
                 onLeave: function(index, nextIndex){
-                    var afterHash = window.location.href.split('#')[1].split('/').length;
-                    if(afterHash > 1){
-                        $body.addClass('slide')
-                    }
-                    else{
-                        $body.removeClass('slide');
-                    }
                     if( nextIndex >= sections.length ){
                         $downArrow.addClass('hidden');
                     }
-                    else{
+                    else if($downArrow.hasClass('hidden')){
                         $downArrow.removeClass('hidden');
-                    }
-                },
-
-                onSlideLeave: function(anchorLink, index, slideIndex, direction){
-                    if(slideIndex == 0 && direction == 'right'){
-                        $body.addClass('slide')
-                    }
-                    else if(slideIndex == 1 && direction == 'left'){
-                        $body.removeClass('slide');
                     }
                 },
 
@@ -238,6 +222,7 @@
 
             });
 
+            toggleSlideActive();
             sizeFourUpCols();
 
             $downArrow.click(function(e){
@@ -253,6 +238,10 @@
                 $(this).click(function(){
                    toggleNav();
                 });
+            });
+
+            $window.on('hashchange', function(){
+                toggleSlideActive();
             });
 
             window.onkeydown = function(e){
@@ -272,6 +261,19 @@
                     var newHeight = window.innerHeight/2;
                     $(this).css('height', newHeight)
                 });
+            }
+
+            function isSlide(){
+                return window.location.href.split('#')[1].split('/').length > 1;
+            }
+
+            function toggleSlideActive(){
+                if(isSlide() && (! $body.hasClass('slide-active'))){
+                    $body.addClass('slide-active');
+                }
+                else if(!isSlide() && ($body.hasClass('slide-active'))){
+                    $body.removeClass('slide-active');
+                }
             }
         });
     </script>

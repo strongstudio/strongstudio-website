@@ -208,6 +208,7 @@ section{
 
 .section-heading{
   background: $orange;
+  background-size: cover;
   color: #fff;
   font-size: 1.5em;
   .col.one-of-two{
@@ -247,9 +248,12 @@ section{
   max-width: 100%;
 }
 
-body.slide{
+body.slide-active{
   #down-arrow{
     background-image: url(../assets/images/down-orange.png);
+  }
+  #page-header{
+    border-color: $grey;
   }
 }
 

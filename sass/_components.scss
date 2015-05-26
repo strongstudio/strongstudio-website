@@ -74,7 +74,7 @@ $transition: .3s; // increase this to see the transformations in slow-motion
   }
 }
 
-body.slide{
+body.slide-active{
   #toggle-button{
     color: $grey;
     .lines{
