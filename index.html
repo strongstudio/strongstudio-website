@@ -14,14 +14,14 @@
             <a href="#home"><img class="header-logo" src="assets/images/ssnyc_nav-bar-logo.svg"></a>
 
                 <button id="toggle-button" class="lines-button x" type="button" role="button" aria-label="Toggle Navigation">
-                    Menu
+
                     <span class="lines"></span>
                 </button>
 
         </header>
         <a id="down-arrow" class="fp-controlArrow" href="#"></a>
         <nav id="main-nav" class="hidden">
-            <div class="row">
+            <div class="row med-single-col">
                 <section id="menu" class="navigation col two-of-four">
                     <h3>Menu:</h3>
                     <ul class="primary">
@@ -73,23 +73,27 @@
 
         <div id="fullpage">
 
-            <header class="section section-heading">
-                <div class="wrapper row">
+            <header class="home section section-heading">
+                <div class="wrapper row med-single-col">
                     <h1 class="col one-of-two">Hello</h1>
                     <p class="col one-of-two border-left">Established in 2006, Strong Studio NYC LLC is a brand-focused graphic design agency. We create distinctive design through identity, print, digital, packaging, and environmental design.</p>
                 </div>
+                <aside class="hint">
+                    <h3>Helpful Hint</h3>
+                    You can use either your mouse or your arrow keys to move between sections.<br>
+                    Down [ v ] for chapters, right [ > ] for pages.</aside>
             </header>
 
-            <div class="section">
+            <div class="section logos">
                 <div class="slide section-heading">
-                    <div class="row wrapper">
+                    <div class="row wrapper med-single-col">
                         <h1 class="col one-of-two">Logos</h1>
                         <p class="col one-of-two border-left">How do you represent your entire brand with a single mark? Research, brains, talent and execution. And sweat...gross.</p>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row four-up">
+                        <div class="row four-up med-single-col">
                             <div class="col one-of-two">
                                 <img src="assets/images/logos/ssnyc_logo_nyt_times-journey.svg">
                             </div>
@@ -97,7 +101,7 @@
                                 <img src="assets/images/logos/ssnyc_logo_brew.svg">
                             </div>
                         </div>
-                        <div class="row four-up">
+                        <div class="row four-up med-single-col">
                             <div class="col one-of-two">
                                 <img src="assets/images/logos/ssnyc_logo_bm_hue-awards.png">
                             </div>
@@ -111,24 +115,24 @@
 
             <div class="section print">
                 <div class="slide section-heading">
-                    <div class="row wrapper">
+                    <div class="row wrapper med-single-col">
                         <h1 class="col one-of-two">Print</h1>
                         <p class="col one-of-two border-left">We are passionate about good print design, and so are our clients. Sorry, trees.</p>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
                             <div class="col one-of-two"><img src="assets/images/print/NYAS/strongstudio_print_nyas_brochure.png"></div>
                             <div class="col one-of-two">
-                                <span class="vertical_aligner"><img src="assets/images/print/NYAS/strongstudio_print_nyas_un-invite.png"></span>
+                                <img src="assets/images/print/NYAS/strongstudio_print_nyas_un-invite.png">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
 
                             <div class="col one-of-two">
                                 <img src="assets/images/print/NYT/strongstudio_print_nyt_architectural-posters-01.png">
@@ -141,7 +145,7 @@
                 </div>
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
                             <div class="col one-of-two"><img src="assets/images/print/NYT/strongstudio_print_nyt_gifts-mockup.png"></div>
                             <div class="col one-of-two">
                                 <span class="placeholder"></span>
@@ -156,7 +160,7 @@
 
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
                             <div class="col one-of-two"><img src="assets/images/print/NYT/strongstudio_print_nyt_homes-cover.png"></div>
                             <div class="col one-of-two"><img src="assets/images/print/NYT/strongstudio_print_nyt_homes-cover-02.png"></div>
                         </div>
@@ -165,7 +169,7 @@
 
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
                             <div class="col one-of-two">
                                 <span class="placeholder"></span>
                             </div>
@@ -176,7 +180,7 @@
 
                 <div class="slide">
                     <div class="wrapper">
-                        <div class="row">
+                        <div class="row med-single-col">
                             <div class="col one-of-two"><img src="assets/images/print/Nets/strongstudio_print_nets_spreads-01.png"></div>
                             <div class="col one-of-two"><img src="assets/images/print/Nets/strongstudio_print_nets_spreads-02.png"></div>
                         </div>
@@ -184,13 +188,15 @@
                 </div>
 
                 <div class="slide">
-                    <div class="full-bleed" style="background-image: url(assets/images/print/Nets/strongstudio_print_nets_booklet-image.png)"></div>
+                    <!--<div class="full-bleed" style="background-image: url(assets/images/print/Nets/strongstudio_print_nets_booklet-image.png)"></div>-->
+                    <div class="full-bleed"><img src="assets/images/print/Nets/strongstudio_print_nets_booklet-image.png"></div>
                 </div>
 
             </div>
 
         </div>
     </body>
+    <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script>
@@ -203,27 +209,15 @@
                 $downArrow = $('#down-arrow'),
                 sections = document.getElementsByClassName('section');
 
-            $('#fullpage').fullpage({
-                navigation: false,
-                anchors: ['home', 'logos', 'print'],
-                animateAnchor: false,
-                scrollingSpeed: 500,
-
-                onLeave: function(index, nextIndex){
-                    if( nextIndex >= sections.length ){
-                        $downArrow.addClass('hidden');
-                    }
-                    else if($downArrow.hasClass('hidden')){
-                        $downArrow.removeClass('hidden');
-                    }
-                },
-
-                afterResize: sizeFourUpCols
-
-            });
+            if(!Modernizr.touch){
+                fullPageize();
+                sizeFourUpCols();
+            }
+            else{
+                $body.addClass('mobile');
+            }
 
             toggleSlideActive();
-            sizeFourUpCols();
 
             $downArrow.click(function(e){
                 e.preventDefault();
@@ -244,12 +238,38 @@
                 toggleSlideActive();
             });
 
+            //window.addEventListener('hashchange', function(){toggleSlideActive(); alert('hashchanged')}, false);
+
+            //window.onhashchange = toggleSlideActive;
+
             window.onkeydown = function(e){
                 var key = e.keyCode ? e.keyCode : e.which;
                 if(key === 27){
                     $toggleButton.click();
                 }
             };
+
+            function fullPageize(){
+                $('#fullpage').fullpage({
+                    navigation: false,
+                    anchors: ['home', 'logos', 'print'],
+                    animateAnchor: false,
+                    scrollingSpeed: 500,
+                    touchSensitivity: 10,
+
+                    onLeave: function(index, nextIndex){
+                        if( nextIndex >= sections.length ){
+                            $downArrow.addClass('hidden');
+                        }
+                        else if($downArrow.hasClass('hidden')){
+                            $downArrow.removeClass('hidden');
+                        }
+                    },
+
+                    afterResize: sizeFourUpCols
+
+                });
+            }
 
             function toggleNav(){
                 $mainNav.hasClass('hidden') ? $mainNav.removeClass('hidden') : $mainNav.addClass('hidden');
@@ -264,14 +284,14 @@
             }
 
             function isSlide(){
-                return window.location.href.split('#')[1].split('/').length > 1;
+                return window.location.href.split('#')[1] ? window.location.href.split('#')[1].split('/').length > 1 : null;
             }
 
             function toggleSlideActive(){
-                if(isSlide() && (! $body.hasClass('slide-active'))){
+                if(isSlide() && ( ! $body.hasClass('slide-active') )){
                     $body.addClass('slide-active');
                 }
-                else if(!isSlide() && ($body.hasClass('slide-active'))){
+                else if(!isSlide() && ( $body.hasClass('slide-active') )){
                     $body.removeClass('slide-active');
                 }
             }

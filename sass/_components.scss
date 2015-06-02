@@ -6,7 +6,7 @@ $transition: .3s; // increase this to see the transformations in slow-motion
   background: none;
   border: none;
   display: inline-block;
-  padding: $button-size/2 $button-size/4;
+  padding: $button-size/2 0;
   transition: .3s;
   cursor: pointer;
   user-select: none;
@@ -22,6 +22,13 @@ $transition: .3s; // increase this to see the transformations in slow-motion
   }
   &:focus{
     outline: 0;
+  }
+
+  &:before{
+    content: 'MENU';
+  }
+  &.close:before{
+    content: 'CLOSE';
   }
 }
 
@@ -68,13 +75,15 @@ $transition: .3s; // increase this to see the transformations in slow-motion
   // rotate the lines to form the x shape
   &:before{
     transform: rotate3d(0,0,1,45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
   }
   &:after{
     transform: rotate3d(0,0,1,-45deg);
+    -webkit-transform: rotate3d(0,0,1,-45deg)
   }
 }
 
-body.slide-active{
+body.slide-active, body.mobile{
   #toggle-button{
     color: $grey;
     .lines{
