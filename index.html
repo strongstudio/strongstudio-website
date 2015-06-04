@@ -11,7 +11,7 @@
     </head>
     <body>
         <header id="page-header">
-            <a href="#home"><img class="header-logo" src="assets/images/ssnyc_nav-bar-logo.svg"></a>
+            <a class="header-logo" href="#home"></a>
 
                 <button id="toggle-button" class="lines-button x" type="button" role="button" aria-label="Toggle Navigation">
 
@@ -72,7 +72,7 @@
         </nav>
 
         <div id="fullpage">
-
+            <a class="anchorLink" name="home"></a>
             <header class="home section section-heading">
                 <div class="wrapper row med-single-col">
                     <h1 class="col one-of-two">Hello</h1>
@@ -83,7 +83,7 @@
                     You can use either your mouse or your arrow keys to move between sections.<br>
                     Down [ v ] for chapters, right [ > ] for pages.</aside>
             </header>
-
+            <a class="anchorLink" name="logos"></a>
             <div class="section logos">
                 <div class="slide section-heading">
                     <div class="row wrapper med-single-col">
@@ -113,6 +113,7 @@
                 </div>
             </div>
 
+            <a class="anchorLink" name="print"></a>
             <div class="section print">
                 <div class="slide section-heading">
                     <div class="row wrapper med-single-col">
@@ -203,11 +204,15 @@
         $(document).ready(function() {
             var $window = $(window),
                 $body = $('body'),
+                $pageHeader = $('#page-header'),
+                $fullpage = $('#fullpage'),
                 $mainNav = $('#main-nav'),
                 $toggleButton = $('#toggle-button'),
                 $navLinks = $('#menu').find('a'),
                 $downArrow = $('#down-arrow'),
-                sections = document.getElementsByClassName('section');
+                sections = document.getElementsByClassName('section'),
+                $anchors = $('.anchorLink'),
+                scrollTop = null;
 
             if(!Modernizr.touch){
                 fullPageize();
@@ -215,6 +220,9 @@
             }
             else{
                 $body.addClass('mobile');
+                $window.scroll(function(){
+                    toggleHeaderOnScrollEfficient(window.scrollY);
+                });
             }
 
             toggleSlideActive();
@@ -238,10 +246,6 @@
                 toggleSlideActive();
             });
 
-            //window.addEventListener('hashchange', function(){toggleSlideActive(); alert('hashchanged')}, false);
-
-            //window.onhashchange = toggleSlideActive;
-
             window.onkeydown = function(e){
                 var key = e.keyCode ? e.keyCode : e.which;
                 if(key === 27){
@@ -250,7 +254,9 @@
             };
 
             function fullPageize(){
-                $('#fullpage').fullpage({
+                // anchors links mess up fullpage navigation. zap them!
+                zapAnchors();
+                $fullpage.fullpage({
                     navigation: false,
                     anchors: ['home', 'logos', 'print'],
                     animateAnchor: false,
@@ -295,6 +301,45 @@
                     $body.removeClass('slide-active');
                 }
             }
+
+            function zapAnchors(){
+                $anchors.each(function(){
+                    this.parentNode.removeChild(this);
+                });
+            }
+
+            function detectScrollDown(start, end){
+                if(start < 0) start = 0;
+                return start && start < end;
+            }
+
+            function toggleHeaderOnScroll(newScrollTop){
+                if(detectScrollDown(scrollTop, newScrollTop)){
+                    $pageHeader.hide();
+                }
+                else{
+                    $pageHeader.show();
+                }
+                scrollTop = newScrollTop;
+            }
+
+            var toggleHeaderOnScrollEfficient = debounce(toggleHeaderOnScroll, 200);
+
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function() {
+                    var context = this, args = arguments;
+                    var later = function() {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    };
+                    var callNow = immediate && !timeout;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                    if (callNow) func.apply(context, args);
+                };
+            }
+
         });
     </script>
 </html>

@@ -7,7 +7,6 @@
 
 body{
   font-family: 'Apercu-light', sans-serif;
-  background: $orange;
 }
 
 h1{
@@ -79,9 +78,12 @@ body.mobile .col.border-left{
 
 .header-logo{
   position: absolute;
+  background-image: url(../assets/images/ssnyc_nav-bar-logo.svg);
+  background-repeat: no-repeat;
   top: 1em;
   left: 0;
   width: 137px;
+  height: 24px;
 }
 
 #toggle-button{
@@ -183,6 +185,15 @@ body.mobile .col.border-left{
   }
 }
 
+body.mobile #main-nav h3{
+  display: none;
+}
+
+body.mobile .section{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 .slide{
   background: #fff;
   &.section-heading{
@@ -229,7 +240,6 @@ body.mobile #down-arrow{
 }
 
 .section-heading{
-  background: $orange;
   background-size: cover;
   color: #fff;
   font-size: 1.5em;
