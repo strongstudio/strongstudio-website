@@ -190,8 +190,13 @@ body.mobile #main-nav h3{
 }
 
 body.mobile .section{
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
+  .slide{
+    padding-top: 4em;
+    &.section-heading{
+      padding-top: 0;
+    }
+  }
 }
 
 .slide{
