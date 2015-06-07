@@ -20,6 +20,9 @@
 
         </header>
         <a id="down-arrow" class="fp-controlArrow" href="#"></a>
+        <a class="my-ControlArrow prev" id="leftArrow"></a>
+        <a class="my-ControlArrow next" id="rightArrow"></a>
+
         <nav id="main-nav" class="hidden">
             <div class="row med-single-col">
                 <section id="menu" class="navigation col two-of-four">
@@ -212,6 +215,8 @@
                 $downArrow = $('#down-arrow'),
                 sections = document.getElementsByClassName('section'),
                 $anchors = $('.anchorLink'),
+                $leftArrow = $('#leftArrow'),
+                $rightArrow = $('#rightArrow');
                 scrollTop = null;
 
             if(!Modernizr.touch){
@@ -225,11 +230,19 @@
                 });
             }
 
-            toggleSlideActive();
-
             $downArrow.click(function(e){
                 e.preventDefault();
                 $.fn.fullpage.moveSectionDown();
+            });
+
+            $leftArrow.click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveSlideLeft();
+            });
+
+            $rightArrow.click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveSlideRight();
             });
 
             $toggleButton.click(function(){
@@ -242,8 +255,9 @@
                 });
             });
 
+
             $window.on('hashchange', function(){
-                toggleSlideActive();
+                //  toggleSlideActive();
             });
 
             window.onkeydown = function(e){
@@ -254,14 +268,14 @@
             };
 
             function fullPageize(){
-                // anchors links mess up fullpage navigation. zap them!
+                // anchor links mess up fullpage navigation. zap them!
                 zapAnchors();
                 $fullpage.fullpage({
                     navigation: false,
                     anchors: ['home', 'logos', 'print'],
                     animateAnchor: false,
                     scrollingSpeed: 500,
-                    touchSensitivity: 10,
+                    touchSensitivity: 25,
 
                     onLeave: function(index, nextIndex){
                         if( nextIndex >= sections.length ){

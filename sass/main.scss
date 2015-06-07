@@ -70,10 +70,14 @@ body.mobile .col.border-left{
   top: 15px;
   left: 30px;
   right: 30px;
-
-  border-top: 2px solid #fff;
+  border-top: 2px solid $page-head-color;
   position: fixed;
   z-index: 10000;
+  -webkit-transition: border-color $transition-time;
+  -moz-transition: border-color $transition-time;
+  -ms-transition: border-color $transition-time;
+  -o-transition: border-color $transition-time;
+  transition: border-color $transition-time;
 }
 
 .header-logo{
@@ -109,11 +113,11 @@ body.mobile .col.border-left{
   background: rgba(0, 0, 0, 0.85);
   color: #fff;
 
-  -webkit-transition: opacity .5s, visibility .5s;
-  -moz-transition: opacity .5s, visibility .5s;
-  -ms-transition: opacity .5s, visibility .5s;
-  -o-transition: opacity .5s, visibility .5s;
-  transition: opacity .5s, visibility .5s;
+  -webkit-transition: opacity $transition-time, visibility $transition-time;
+  -moz-transition: opacity $transition-time, visibility $transition-time;
+  -ms-transition: opacity $transition-time, visibility $transition-time;
+  -o-transition: opacity $transition-time, visibility $transition-time;
+  transition: opacity $transition-time, visibility $transition-time;
 
   h3{
     text-transform: uppercase;
@@ -223,7 +227,7 @@ body.mobile .section{
   top: 99%;
   width: 58px;
   height: 29px;
-  background-image: url(../assets/images/down-arrow.png);
+  background-image: url(../assets/images/down-orange.png);
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -234,6 +238,46 @@ body.mobile .section{
 
 body.mobile #down-arrow{
   display: none;
+}
+
+.fp-controlArrow.fp-next, .fp-controlArrow.fp-prev{
+  display: none;
+}
+
+.my-ControlArrow{
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include fade-in;
+  opacity: 1;
+  visibility: visible;
+  &:hover{
+    cursor: pointer;
+  }
+  &.prev{
+    background-position: top left;
+    background-image: url(../assets/images/arrow-left.svg);
+    left: 2%;
+  }
+  &.next{
+    background-position: top right;
+    background-image: url(../assets/images/arrow-right.svg);
+    right: 2%;
+  }
+}
+
+.fp-viewing-home{
+  .my-ControlArrow{
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .fp-controlArrow.fp-prev{
@@ -319,7 +363,19 @@ body.slide-active{
     background-image: url(../assets/images/down-orange.png);
   }
   #page-header{
-    border-color: $grey;
+    border-color: #fff;
+  }
+}
+
+body.fp-viewing-home{
+  #down-arrow{
+    background-image: url(../assets/images/down-arrow.png);
+  }
+  #page-header{
+    border-color: #fff;
+    .header-logo{
+      background-image: url(../assets/images/ssnyc_nav-bar-logo-ko.svg);
+    }
   }
 }
 

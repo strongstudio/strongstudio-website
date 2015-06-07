@@ -14,6 +14,12 @@ $phone-width: 30em;
 
 $gutter-width: 3%;
 
+$grey: #888b8d;
+$orange: #f48029;
+$page-head-color: #888b8d;
+
+$transition-time: .3s;
+
 
 @mixin clearfix{
   &:after {
@@ -85,6 +91,14 @@ $gutter-width: 3%;
   width: 80% - $gutter-width;
 }
 
+@mixin fade-in{
+  -webkit-transition: opacity $transition-time;
+  -moz-transition: opacity $transition-time;
+  -ms-transition: opacity $transition-time;
+  -o-transition: opacity $transition-time;
+  transition: opacity $transition-time;
+}
+
 
 @mixin pre-wrap{
   white-space: pre-wrap;       /* CSS 3 */
@@ -93,7 +107,3 @@ $gutter-width: 3%;
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;
 }
-
-$grey: #888b8d;
-$orange: #f48029;
-$page-head-color: #fff;

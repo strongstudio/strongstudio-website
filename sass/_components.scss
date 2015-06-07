@@ -97,3 +97,18 @@ body.slide-active, body.mobile{
     }
   }
 }
+
+body.fp-viewing-home{
+  #toggle-button{
+    color: #fff;
+    .lines{
+      background: #fff;
+      &:before, &:after{
+        background: #fff;
+      }
+    }
+    .x.close .lines {
+      /*hide the middle line*/
+    }
+  }
+}
