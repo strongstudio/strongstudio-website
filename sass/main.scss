@@ -78,26 +78,60 @@ body.mobile .col.border-left{
   -ms-transition: border-color $transition-time;
   -o-transition: border-color $transition-time;
   transition: border-color $transition-time;
+
+  .header-logo{
+    position: absolute;
+    background-image: url(../assets/images/ssnyc_nav-bar-logo.svg);
+    background-repeat: no-repeat;
+    top: 1em;
+    left: 0;
+    width: 137px;
+    height: 24px;
+  }
+
+  #toggle-button{
+    position: absolute;
+    right: 0;
+    color: $page-head-color;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $page-head-color;
+  }
+
+  .locationTracker{
+    position: absolute;
+    top: 0;
+    border-left: 2px solid $page-head-color;
+    padding-left: .75em;
+    color: $page-head-color;
+    -webkit-transition: opacity $transition-time;
+    -moz-transition: opacity $transition-time;
+    -ms-transition: opacity $transition-time;
+    -o-transition: opacity $transition-time;
+    transition: opacity $transition-time;
+    &::first-letter{
+      text-transform: capitalize;
+    }
+  }
+
+  #sectionTracker{
+    left: 50%;
+  }
+
+  #slideTracker{
+    left: 65%;
+  }
+
 }
 
-.header-logo{
-  position: absolute;
-  background-image: url(../assets/images/ssnyc_nav-bar-logo.svg);
-  background-repeat: no-repeat;
-  top: 1em;
-  left: 0;
-  width: 137px;
-  height: 24px;
+body.fp-viewing-home #page-header .locationTracker{
+  opacity: 0;
+  visibility: hidden;
 }
 
-#toggle-button{
-  position: absolute;
-  right: 0;
-  color: $page-head-color;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: $page-head-color;
-}
+
+
+
 
 // MENU
 

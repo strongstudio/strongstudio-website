@@ -12,6 +12,8 @@
     <body>
         <header id="page-header">
             <a class="header-logo" href="#home"></a>
+            <span class="locationTracker" id="sectionTracker"></span>
+            <span class="locationTracker" id="slideTracker"></span>
 
                 <button id="toggle-button" class="lines-button x" type="button" role="button" aria-label="Toggle Navigation">
 
@@ -216,7 +218,9 @@
                 sections = document.getElementsByClassName('section'),
                 $anchors = $('.anchorLink'),
                 $leftArrow = $('#leftArrow'),
-                $rightArrow = $('#rightArrow');
+                $rightArrow = $('#rightArrow'),
+                $sectionTracker = $('#sectionTracker'),
+                $slideTracker = $('#slideTracker'),
                 scrollTop = null;
 
             if(!Modernizr.touch){
@@ -286,6 +290,19 @@
                         }
                     },
 
+                    afterLoad: function(anchorLink, index){
+                        // fix for indexing beginning at one
+                        index -= 1;
+                        updateIndicator($sectionTracker, anchorLink);
+                        updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
+                    },
+
+                    afterSlideLoad: function(anchorLink, index){
+                        index -= 1;
+                        console.log(trackSlide(), 'of', countSlides(index));
+                        updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
+                    },
+
                     afterResize: sizeFourUpCols
 
                 });
@@ -294,6 +311,21 @@
             function toggleNav(){
                 $mainNav.hasClass('hidden') ? $mainNav.removeClass('hidden') : $mainNav.addClass('hidden');
                 $toggleButton.toggleClass('close');
+            }
+
+
+            function trackSlide(){
+                return isSlide() ? parseInt(window.location.href.split('#')[1].split('/')[1]) + 1 : 1;
+            }
+
+            function countSlides(index){
+                var section = sections[index];
+                var length = section.getElementsByClassName('slide').length
+                return length > 0 ? length : 1;
+            }
+
+            function updateIndicator($el, info){
+                $el.html(info);
             }
 
             function sizeFourUpCols(){
@@ -321,6 +353,8 @@
                     this.parentNode.removeChild(this);
                 });
             }
+
+            // MOBILE
 
             function detectScrollDown(start, end){
                 if(start < 0) start = 0;
