@@ -1,0 +1,104 @@
+        </div>
+    </body>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script>
+        $(document).ready(function() {
+            var $window = $(window),
+                $body = $('body'),
+                $mainNav = $('#main-nav'),
+                $toggleButton = $('#toggle-button'),
+                $navLinks = $('#menu').find('a'),
+                $downArrow = $('#down-arrow'),
+                sections = document.getElementsByClassName('section');
+
+            if(!Modernizr.touch){
+                fullPageize();
+                sizeFourUpCols();
+            }
+            else{
+                $body.addClass('mobile');
+            }
+
+            toggleSlideActive();
+
+            $downArrow.click(function(e){
+                e.preventDefault();
+                $.fn.fullpage.moveSectionDown();
+            });
+
+            $toggleButton.click(function(){
+               toggleNav();
+            });
+
+            $navLinks.each(function(){
+                $(this).click(function(){
+                   toggleNav();
+                });
+            });
+
+            $window.on('hashchange', function(){
+                toggleSlideActive();
+            });
+
+            //window.addEventListener('hashchange', function(){toggleSlideActive(); alert('hashchanged')}, false);
+
+            //window.onhashchange = toggleSlideActive;
+
+            window.onkeydown = function(e){
+                var key = e.keyCode ? e.keyCode : e.which;
+                if(key === 27){
+                    $toggleButton.click();
+                }
+            };
+
+            function fullPageize(){
+                $('#fullpage').fullpage({
+                    navigation: false,
+                    anchors: ['home', 'logos', 'print'],
+                    animateAnchor: false,
+                    scrollingSpeed: 500,
+                    touchSensitivity: 10,
+
+                    onLeave: function(index, nextIndex){
+                        if( nextIndex >= sections.length ){
+                            $downArrow.addClass('hidden');
+                        }
+                        else if($downArrow.hasClass('hidden')){
+                            $downArrow.removeClass('hidden');
+                        }
+                    },
+
+                    afterResize: sizeFourUpCols
+
+                });
+            }
+
+            function toggleNav(){
+                $mainNav.hasClass('hidden') ? $mainNav.removeClass('hidden') : $mainNav.addClass('hidden');
+                $toggleButton.toggleClass('close');
+            }
+
+            function sizeFourUpCols(){
+                $('.row.four-up').each(function(){
+                    var newHeight = window.innerHeight/2;
+                    $(this).css('height', newHeight)
+                });
+            }
+
+            function isSlide(){
+                return window.location.href.split('#')[1] ? window.location.href.split('#')[1].split('/').length > 1 : null;
+            }
+
+            function toggleSlideActive(){
+                if(isSlide() && ( ! $body.hasClass('slide-active') )){
+                    $body.addClass('slide-active');
+                }
+                else if(!isSlide() && ( $body.hasClass('slide-active') )){
+                    $body.removeClass('slide-active');
+                }
+            }
+        });
+    </script>
+</html>
