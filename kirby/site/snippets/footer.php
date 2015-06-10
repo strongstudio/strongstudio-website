@@ -15,6 +15,7 @@
                 $navLinks = $('#menu').find('a'),
                 $downArrow = $('#down-arrow'),
                 sections = document.getElementsByClassName('section'),
+                $sectionHeadings = $('.section-heading'),
                 $anchors = $('.anchorLink'),
                 $leftArrow = $('#leftArrow'),
                 $rightArrow = $('#rightArrow'),
@@ -29,6 +30,8 @@
             }
             else{
                 $body.addClass('mobile');
+                sizeSectionHeadings();
+                window.addEventListener('resize', sizeSectionHeadings);
                 mobileWaypoints();
                 $window.scroll(function(){
                     toggleHeaderOnScrollEfficient(window.scrollY);
@@ -164,10 +167,10 @@
 
             function toggleHeaderOnScroll(newScrollTop){
                 if(detectScrollDown(scrollTop, newScrollTop)){
-                    $pageHeader.addClass('hidden');
+                    $pageHeader.addClass('hiding');
                 }
                 else{
-                    $pageHeader.removeClass('hidden');
+                    $pageHeader.removeClass('hiding');
                 }
                 scrollTop = newScrollTop;
             }
@@ -181,6 +184,15 @@
                     }
                     else if(direction === 'up'){
                         $body.addClass('fp-viewing-home');
+                    }
+                });
+            }
+            
+            function sizeSectionHeadings(){
+                $sectionHeadings.each(function(){
+                    console.log(window.getComputedStyle(this).getPropertyValue('height'));
+                    if(window.innerHeight > window.getComputedStyle(this).getPropertyValue('height').replace(/\D/g,'')){
+                        this.style.height = window.innerHeight + 'px';
                     }
                 });
             }

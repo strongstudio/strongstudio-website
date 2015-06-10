@@ -73,17 +73,22 @@ body.mobile .col.border-left{
   border-top: 2px solid $page-head-color;
   position: fixed;
   z-index: 10000;
-  -webkit-transition: border-color $transition-time;
-  -moz-transition: border-color $transition-time;
-  -ms-transition: border-color $transition-time;
-  -o-transition: border-color $transition-time;
-  transition: border-color $transition-time;
+  -webkit-transition: border-color $transition-time, transform $transition-time, -webkit-transform $transition-time;
+  -moz-transition: border-color $transition-time, transform $transition-time;
+  -ms-transition: border-color $transition-time, transform $transition-time;
+  -o-transition: border-color $transition-time, transform $transition-time;
+  transition: border-color $transition-time, transform $transition-time;
+
+  &.hiding{
+    transform: translateY(-3.5em);
+    -webkit-transform: translateY(-3.5em);
+  }
 
   .header-logo{
     position: absolute;
     background-image: url(../assets/images/ssnyc_nav-bar-logo.svg);
     background-repeat: no-repeat;
-    top: 1em;
+    top: .75em;
     left: 0;
     width: 137px;
     height: 24px;
@@ -102,7 +107,7 @@ body.mobile .col.border-left{
     position: absolute;
     top: 0;
     border-left: 2px solid $page-head-color;
-    padding-left: .75em;
+    padding: .375em 0 0 .75em;
     color: $page-head-color;
     -webkit-transition: opacity $transition-time;
     -moz-transition: opacity $transition-time;
@@ -137,7 +142,9 @@ body.fp-viewing-home #page-header .locationTracker{
 
 #main-nav{
   position: fixed;
-  overflow: scroll;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   top: 0;
   bottom: 0;
   left: 0;
@@ -237,15 +244,6 @@ body.mobile .section{
   }
 }
 
-.slide{
-  background: #fff;
-  &.section-heading{
-    //background: $orange;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
 .fp-controlArrow{
   background-repeat: no-repeat;
   background-size: contain;
@@ -322,6 +320,14 @@ body.mobile #down-arrow{
   background-image: url(../assets/images/arrow-right.svg);
 }
 
+.slide{
+  background: #fff;
+  &.section-heading{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 .section-heading{
   background-size: cover;
   color: #fff;
@@ -342,6 +348,7 @@ body.mobile #down-arrow{
 
 .mobile .section-heading{
   padding-bottom: 64px;
+  height: 100%;
 }
 
 .mobile .section-heading h1.col.one-of-two{

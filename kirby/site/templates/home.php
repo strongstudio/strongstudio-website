@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-    
+    <a class="anchorLink" name="home"></a>
     <div class="home section section-heading">
         <div class="wrapper row med-single-col">
             <h1 class="col one-of-two">Hello</h1>
@@ -11,7 +11,7 @@
             Dwn [ v ] for chapters, right [ > ] for pages.
         </aside>
     </div>
-    <a id="afterhome"></a>
+    <a id="afterhome" class="anchorLink"></a>
             
     <?php foreach($pages->visible() as $section) {
             snippet('section', array('data' => $section));
