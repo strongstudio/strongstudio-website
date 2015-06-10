@@ -1346,7 +1346,7 @@ body.mobile #down-arrow {
 }
 
 /* line 311, ../../sass/main.scss */
-.fp-viewing-home .my-ControlArrow {
+.fp-viewing-home .my-ControlArrow, body.mobile .my-ControlArrow {
   visibility: hidden;
   opacity: 0;
 }
@@ -1456,21 +1456,21 @@ body.slide-active #page-header {
 }
 
 /* line 405, ../../sass/main.scss */
+body.mobile #page-header {
+  border-color: #888b8d;
+}
+
+/* line 411, ../../sass/main.scss */
 body.fp-viewing-home #down-arrow {
   background-image: url(../assets/images/down-arrow.png);
 }
-/* line 408, ../../sass/main.scss */
+/* line 414, ../../sass/main.scss */
 body.fp-viewing-home #page-header {
   border-color: #fff;
 }
-/* line 410, ../../sass/main.scss */
+/* line 416, ../../sass/main.scss */
 body.fp-viewing-home #page-header .header-logo {
   background-image: url(../assets/images/ssnyc_nav-bar-logo-ko.svg);
-}
-
-/* line 417, ../../sass/main.scss */
-body.mobile #page-header {
-  border-color: #888b8d;
 }
 
 /* line 424, ../../sass/main.scss */

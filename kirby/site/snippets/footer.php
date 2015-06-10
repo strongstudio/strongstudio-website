@@ -3,6 +3,7 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script>
         $(document).ready(function() {
             var $window = $(window),
@@ -19,6 +20,7 @@
                 $rightArrow = $('#rightArrow'),
                 $sectionTracker = $('#sectionTracker'),
                 $slideTracker = $('#slideTracker'),
+                $afterHome = $('#afterhome'),
                 scrollTop = null;
 
             if(!Modernizr.touch){
@@ -27,6 +29,7 @@
             }
             else{
                 $body.addClass('mobile');
+                mobileWaypoints();
                 $window.scroll(function(){
                     toggleHeaderOnScrollEfficient(window.scrollY);
                 });
@@ -161,12 +164,25 @@
 
             function toggleHeaderOnScroll(newScrollTop){
                 if(detectScrollDown(scrollTop, newScrollTop)){
-                    $pageHeader.hide();
+                    $pageHeader.addClass('hidden');
                 }
                 else{
-                    $pageHeader.show();
+                    $pageHeader.removeClass('hidden');
                 }
                 scrollTop = newScrollTop;
+            }
+            
+            function mobileWaypoints(){
+                $body.addClass('fp-viewing-home');
+                $afterHome.waypoint(function(direction){
+                    console.log('waypoint');
+                    if(direction === 'down'){
+                        $body.removeClass('fp-viewing-home');
+                    }
+                    else if(direction === 'up'){
+                        $body.addClass('fp-viewing-home');
+                    }
+                });
             }
 
             var toggleHeaderOnScrollEfficient = debounce(toggleHeaderOnScroll, 200);

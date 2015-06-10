@@ -307,7 +307,7 @@ body.mobile #down-arrow{
   }
 }
 
-.fp-viewing-home{
+.fp-viewing-home, body.mobile{
   .my-ControlArrow{
     visibility: hidden;
     opacity: 0;
@@ -401,6 +401,12 @@ body.slide-active{
   }
 }
 
+body.mobile{
+  #page-header{
+    border-color: $grey;
+  }
+}
+
 body.fp-viewing-home{
   #down-arrow{
     background-image: url(../assets/images/down-arrow.png);
@@ -410,12 +416,6 @@ body.fp-viewing-home{
     .header-logo{
       background-image: url(../assets/images/ssnyc_nav-bar-logo-ko.svg);
     }
-  }
-}
-
-body.mobile{
-  #page-header{
-    border-color: $grey;
   }
 }
 
