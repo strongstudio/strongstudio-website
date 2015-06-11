@@ -28,7 +28,8 @@
   margin: 0;
   padding-left: $gutter/2;
   padding-right: $gutter/2;
-  float: left;
+  //float: left;
+  display: inline-block;
   box-sizing: border-box;
   &:first-child{
     margin-left: 0;
@@ -37,14 +38,12 @@
 
 .row{
   position: relative;
+  font-size: 0;
   @include clearfix;
 
   .col{
-
+    //font-size: 16px;
     margin-left: $gutter-width;
-    float: left;
-
-
     &:first-child{
       margin-left: 0;
     }

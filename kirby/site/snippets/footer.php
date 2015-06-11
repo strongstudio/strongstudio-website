@@ -26,7 +26,7 @@
 
             if(!Modernizr.touch){
                 fullPageize();
-                sizeFourUpCols();
+                //sizeFourUpCols();
             }
             else{
                 $body.addClass('mobile');
@@ -107,7 +107,7 @@
                         updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
                     },
 
-                    afterResize: sizeFourUpCols
+                    //afterResize: sizeFourUpCols
 
                 });
             }

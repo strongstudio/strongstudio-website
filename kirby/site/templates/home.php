@@ -2,8 +2,12 @@
     <a class="anchorLink" name="home"></a>
     <div class="home section section-heading">
         <div class="wrapper row med-single-col">
-            <h1 class="col one-of-two">Hello</h1>
-            <p class="col one-of-two border-left">Established in 2006, Strong Studio NYC LLC is a brand-focused graphic design agency. We create distinctive design through identity, print, digital, packaging, and environmental design.</p>
+            <div class="col one-of-two">
+                <h1>Hello</h1>
+            </div>
+            <div class="col one-of-two border-left">
+                <p>Established in 2006, Strong Studio NYC LLC is a brand-focused graphic design agency. We create distinctive design through identity, print, digital, packaging, and environmental design.</p>
+            </div>
         </div>
         <aside class="hint">
             <h3>Helpful Hint</h3>

@@ -2,8 +2,12 @@
 <div class="section <?php echo $data->uid(); ?>">
     <div class="slide section-heading" <?php if($image = $data->image('cover.jpg')){echo 'style="background-image: url('. $image->url() .')"';} ?>>
         <div class="wrapper row med-single-col">
-            <h1 class="col one-of-two"><?php echo ucfirst($data->title()->html()); ?></h1>
-            <p class="col one-of-two border-left"><?php echo $data->text(); ?></p>
+            <div class="col one-of-two">
+                <h1><?php echo ucfirst($data->title()->html()); ?></h1>
+            </div>
+            <div class="col one-of-two border-left">
+                <p class="tagline"><?php echo $data->text(); ?></p>
+            </div>
         </div>
     </div>
     
