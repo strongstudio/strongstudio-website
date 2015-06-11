@@ -83,7 +83,7 @@
                     anchors: ['home', 'logos', 'print', 'digital', 'icons-infographics', 'packaging-products', 'pie-in-the-sky', 'new-york-academy-of-sciences', 'the-new-york-times', 'about', 'clients', 'careers', 'contact'],
                     animateAnchor: false,
                     scrollingSpeed: 500,
-                    touchSensitivity: 25,
+                    touchSensitivity: 35,
 
                     onLeave: function(index, nextIndex){
                         if( nextIndex >= sections.length ){
