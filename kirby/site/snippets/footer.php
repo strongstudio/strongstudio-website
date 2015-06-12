@@ -97,6 +97,14 @@
                     afterLoad: function(anchorLink, index){
                         // fix so indexing begins at zero
                         index -= 1;
+                        if(countSlides(index) < 2) {
+                            $leftArrow.addClass('hidden');
+                            $rightArrow.addClass('hidden');
+                        }
+                        else{
+                            $leftArrow.removeClass('hidden');
+                            $rightArrow.removeClass('hidden');
+                        }
                         updateIndicator($sectionTracker, anchorLink);
                         updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
                     },
@@ -106,9 +114,6 @@
                         console.log(trackSlide(), 'of', countSlides(index));
                         updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
                     },
-
-                    //afterResize: sizeFourUpCols
-
                 });
             }
 

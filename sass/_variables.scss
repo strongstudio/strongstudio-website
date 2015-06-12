@@ -50,11 +50,6 @@ $transition-time: .5s;
   border-radius: $radius;
 }
 
-//@mixin column($units, $of-how-many){
-//  //width: (($units/$of-how-many)*100%) - ($gutter-width/($of-how-many*($units/$of-how-many)));
-//  width: (($units/$of-how-many)*100) - $gutter-width + ($gutter-width*($units/$of-how-many));
-//}
-
 @mixin one-of-two{
   width: 50% - ($gutter-width/2);
 }

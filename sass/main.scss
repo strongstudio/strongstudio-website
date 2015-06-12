@@ -65,6 +65,7 @@ body.mobile .col.border-left{
 .hidden{
   visibility: hidden;
   opacity: 0;
+  @include fade-in;
 }
 
 #page-header{
@@ -295,7 +296,6 @@ body.mobile #down-arrow{
   background-repeat: no-repeat;
   @include fade-in;
   opacity: 1;
-  visibility: visible;
   &:hover{
     cursor: pointer;
   }
@@ -343,8 +343,7 @@ body.mobile #down-arrow{
   font-size: 1.5em;
   .col.one-of-two{
     @include column(1, 2, 10%);
-    height: 100%;
-    min-height: 350px;
+    height: 300px;
     vertical-align: middle;
     display: table-cell;
   }
@@ -359,6 +358,7 @@ body.mobile #down-arrow{
   height: 100%;
   .col.one-of-two{
     display: inline-block;
+    height: auto;
   }
 }
 
