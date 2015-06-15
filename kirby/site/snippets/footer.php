@@ -82,7 +82,7 @@
                     navigation: false,
                     anchors: ['home', 'logos', 'print', 'digital', 'icons-infographics', 'packaging-products', 'pie-in-the-sky', 'new-york-academy-of-sciences', 'the-new-york-times', 'about', 'clients', 'careers', 'contact'],
                     animateAnchor: false,
-                    scrollingSpeed: 500,
+                    scrollingSpeed: 700,
                     touchSensitivity: 35,
 
                     onLeave: function(index, nextIndex){
@@ -97,6 +97,7 @@
                     afterLoad: function(anchorLink, index){
                         // fix so indexing begins at zero
                         index -= 1;
+                        var title = $(this).data('title');
                         if(countSlides(index) < 2) {
                             $leftArrow.addClass('hidden');
                             $rightArrow.addClass('hidden');
@@ -105,7 +106,8 @@
                             $leftArrow.removeClass('hidden');
                             $rightArrow.removeClass('hidden');
                         }
-                        updateIndicator($sectionTracker, anchorLink);
+                        //TODO - disable keyboard left-right controls on single slide sections as well
+                        updateIndicator($sectionTracker, title);
                         updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
                     },
 

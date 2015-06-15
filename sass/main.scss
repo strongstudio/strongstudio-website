@@ -68,6 +68,8 @@ body.mobile .col.border-left{
   @include fade-in;
 }
 
+
+// HEADER
 #page-header{
   top: 15px;
   left: 30px;
@@ -141,7 +143,6 @@ body.mobile .locationTracker{
 }
 
 // MENU
-
 #main-nav{
   position: fixed;
   overflow-y: scroll;
@@ -241,15 +242,8 @@ body.mobile #main-nav h3{
   display: none;
 }
 
-body.mobile .section{
-  padding-bottom: 4em;
-  .slide{
-    padding-top: 4em;
-    &.section-heading{
-      padding-top: 0;
-    }
-  }
-}
+
+// CONTROLS
 
 .fp-controlArrow{
   background-repeat: no-repeat;
@@ -324,6 +318,18 @@ body.mobile #down-arrow{
 
 .fp-controlArrow.fp-next{
   background-image: url(../assets/images/arrow-right.svg);
+}
+
+// SECTIONS AND SLIDES
+
+body.mobile .section{
+  padding-bottom: 4em;
+  .slide{
+    padding-top: 4em;
+    &.section-heading{
+      padding-top: 0;
+    }
+  }
 }
 
 .slide{
@@ -456,12 +462,6 @@ body.fp-viewing-home{
   background-image: url(../assets/images/print/strongstudio_print_chapter-cover.jpg);
 }
 
-.vertical_aligner {
-  vertical-align: middle;
-  height: 100%;
-  display: table-cell;
-}
-
 .full-bleed{
   width: 100%;
   height: 100%;
@@ -483,12 +483,27 @@ body.mobile .full-bleed img{
   min-height: 0;
 }
 
-.placeholder{
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #ff0;
-  &:before{
-    content: 'Placeholder';
+.case-study-slide{
+  .row .col{
+    vertical-align: top;
+  }
+  dt{
+    width: 100%;
+    border-bottom: 1px solid $orange;
+    font-family: Apercu-bold, sans-serif;
+    text-transform: uppercase;
+    color: $orange;
+    &:after{
+      content: ":";
+    }
+  }
+  dd{
+    margin: 1rem 0 3rem 0 !important;
+    color: $grey;
+    q{
+      color: $orange;
+      font-family: Enclave-thin, serif;
+      font-size: 1.5em;
+    }
   }
 }
