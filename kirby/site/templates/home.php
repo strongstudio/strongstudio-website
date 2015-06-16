@@ -17,8 +17,13 @@
     </div>
     <a id="afterhome" class="anchorLink"></a>
             
-    <?php foreach($pages->visible() as $section) {
-            snippet('section', array('data' => $section));
+    <?php foreach($pages->find('services')->children() as $section) {
+            snippet('service', array('data' => $section));
+    }
+    ?>
+    
+    <?php foreach($pages->find('casestudies')->children() as $section) {
+            snippet('casestudy', array('data' => $section));
     }
     ?>
     

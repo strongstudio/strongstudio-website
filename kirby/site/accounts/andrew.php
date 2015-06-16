@@ -7,5 +7,4 @@ password: >
 language: en
 role: admin
 history:
-  - print
-  - logos
+  - casestudies/pie-in-the-sky
