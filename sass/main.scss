@@ -483,6 +483,20 @@ body.mobile .full-bleed img{
   min-height: 0;
 }
 
+.cs-title{
+  display: inline-block;
+  .cs{
+    display: block;
+    font-size: 2em;
+    text-align: right;
+  }
+  h2{
+    font-family: Enclave-thin, serif;
+    font-size: 4em;
+    margin: 0;
+  }
+}
+
 .case-study-slide{
   .row .col{
     vertical-align: top;

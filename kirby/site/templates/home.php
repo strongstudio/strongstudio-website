@@ -23,11 +23,13 @@
     ?>
     
     <div class="section">
-        <div class="slide section-heading" style="background: #0000ff">
+        <div class="slide section-heading" style="background: #67a2b9">
             <div class="wrapper row med-single-col">
                 <div class="col one-of-two">
-                    <div class="cs">CASE STUDY:</div>
-                    <h2>Pie in the Sky</h2>
+                    <div class="cs-title">
+                        <span class="cs">CASE STUDY:</span>
+                        <h2>Pie in the Sky</h2>
+                    </div>
                 </div>
                 <div class="col one-of-two border-left">
                     <p>They make delicious, gluten-free pies in Colorado. We make their sweet graphic design in New York City.</p>

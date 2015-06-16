@@ -1548,11 +1548,28 @@ body.mobile .full-bleed img {
   min-height: 0;
 }
 
-/* line 487, ../../sass/main.scss */
+/* line 486, ../../sass/main.scss */
+.cs-title {
+  display: inline-block;
+}
+/* line 488, ../../sass/main.scss */
+.cs-title .cs {
+  display: block;
+  font-size: 2em;
+  text-align: right;
+}
+/* line 493, ../../sass/main.scss */
+.cs-title h2 {
+  font-family: Enclave-thin, serif;
+  font-size: 4em;
+  margin: 0;
+}
+
+/* line 501, ../../sass/main.scss */
 .case-study-slide .row .col {
   vertical-align: top;
 }
-/* line 490, ../../sass/main.scss */
+/* line 504, ../../sass/main.scss */
 .case-study-slide dt {
   width: 100%;
   border-bottom: 1px solid #f48029;
@@ -1560,16 +1577,16 @@ body.mobile .full-bleed img {
   text-transform: uppercase;
   color: #f48029;
 }
-/* line 496, ../../sass/main.scss */
+/* line 510, ../../sass/main.scss */
 .case-study-slide dt:after {
   content: ":";
 }
-/* line 500, ../../sass/main.scss */
+/* line 514, ../../sass/main.scss */
 .case-study-slide dd {
   margin: 1rem 0 3rem 0 !important;
   color: #888b8d;
 }
-/* line 503, ../../sass/main.scss */
+/* line 517, ../../sass/main.scss */
 .case-study-slide dd q {
   color: #f48029;
   font-family: Enclave-thin, serif;
