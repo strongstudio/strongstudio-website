@@ -1,6 +1,6 @@
 <a class="anchorLink" name="<?php echo $data->uid(); ?>"></a>
 <div class="section  <?php echo $data->uid(); ?>" data-title="<?php echo ucfirst($data->title()->html()); ?>">
-    <div class="slide section-heading" style="background: #67a2b9">
+    <div class="slide section-heading" style="background: #<?php echo $data->bgcolor();?>">
         <div class="wrapper row med-single-col">
             <div class="col one-of-two">
                 <div class="cs-title">
@@ -21,10 +21,10 @@
                 <dt>Services</dt>
                 <dd class="row">
                     <div class="col one-of-two">
-                        <?php echo kirbytextSans($data->services1()); ?>
+                        <?php echo kirbytextRaw($data->services1()); ?>
                     </div>
                     <div class="col one-of-two">
-                        <?php echo kirbytextSans($data->services2()); ?>
+                        <?php echo kirbytextRaw($data->services2()); ?>
                     </div>
                 </dd>
             </dl>
