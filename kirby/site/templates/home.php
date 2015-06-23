@@ -26,5 +26,7 @@
             snippet('casestudy', array('data' => $section));
     }
     ?>
+    
+    <?php snippet('about'); ?>
 
-<?php snippet('footer') ?>
+<?php snippet('footer'); ?>

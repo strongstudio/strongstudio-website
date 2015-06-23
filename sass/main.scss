@@ -488,6 +488,7 @@ body.mobile .full-bleed img{
 
 .cs-title{
   display: inline-block;
+  width: 100%;
   .cs{
     display: block;
     font-size: 2em;
@@ -530,6 +531,17 @@ body.mobile .full-bleed img{
       color: $orange;
       font-family: Enclave-thin, serif;
       font-size: 1.5em;
+    }
+  }
+}
+
+.about{
+  .col{
+    vertical-align: top;
+  }
+  .staff{
+    header{
+      padding-left: 120px;
     }
   }
 }

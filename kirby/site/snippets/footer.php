@@ -26,7 +26,6 @@
 
             if(!Modernizr.touch){
                 fullPageize();
-                //sizeFourUpCols();
             }
             else{
                 $body.addClass('mobile');
@@ -61,11 +60,6 @@
                 $(this).click(function(){
                    toggleNav();
                 });
-            });
-
-
-            $window.on('hashchange', function(){
-                //  toggleSlideActive();
             });
 
             window.onkeydown = function(e){
@@ -137,13 +131,6 @@
 
             function updateIndicator($el, info){
                 $el.html(info);
-            }
-
-            function sizeFourUpCols(){
-                $('.row.four-up').each(function(){
-                    var newHeight = window.innerHeight/2;
-                    $(this).css('height', newHeight)
-                });
             }
 
             function isSlide(){
