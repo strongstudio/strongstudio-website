@@ -541,7 +541,86 @@ body.mobile .full-bleed img{
   }
   .staff{
     header{
-      padding-left: 120px;
+      padding: 30px 0 30px 120px;
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    h3{
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .title{
+      color: $orange;
+    }
+    &.matthew header{
+      background-image: url(../assets/images/01_ssnyc_about_ms.png);
+    }
+    &.linda header{
+      background-image: url(../assets/images/02_ssnyc_about_ls.png);
+    }
+    &.kate header{
+      background-image: url(../assets/images/03_ssnyc_about_ka.png);
+    }
+    &.alyssa header{
+      background-image: url(../assets/images/05_ssnyc_about_ap.png)
+    }
+    &.sam header{
+      background-image: url(../assets/images/04_ssnyc_about_sa.png);
+    }
+    &.caitlyn header{
+      background-image: url(../assets/images/06_ssnyc_about_cb.png);
+    }
+  }
+}
+
+.clients{
+  h2{
+    font-size: 3rem;
+    margin-bottom: .5em;
+    font-family: Enclave-thin, serif;
+  }
+  .section-heading{
+    background-image: url(../assets/images/ssnyc_clients_cover.jpg);
+    background-position: bottom left;
+  }
+  .col{
+    vertical-align: top;
+  }
+}
+
+.contact .section-heading{
+  background: #ccc;
+  color: $grey;
+}
+
+.careers{
+  .col{
+    vertical-align: top;
+  }
+
+  .job-description{
+    h3{
+      font-size: 1em;
+      color: $orange;
+      text-transform: uppercase;
+      border-bottom: 1px solid $orange;
+      padding-bottom: .5em;
+    }
+    h4{
+      padding:0;
+      margin: 0 0 .5em 0;
+    }
+    ul{
+      padding: 1em;
+    }
+    p{
+      color: $orange;
+      font-size: .875em;
+    }
+    li{
+      font-size: .875em;
+      line-height: 1.25em;
     }
   }
 }

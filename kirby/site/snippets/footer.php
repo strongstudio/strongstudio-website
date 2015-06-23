@@ -5,6 +5,26 @@
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script>
+        window.anchors = [
+            'home',
+            <?php foreach($pages as $page){
+                if($page->children()){
+                    foreach($page->children() as $child){
+                        echo "'" . $child->uid() . "', ";
+                    }
+                }
+                else{
+                    echo $page->uri();
+                }
+            } ?>
+            'about',
+            'clients',
+            'careers',
+            'contact'
+        ];
+        
+    </script>
+    <script>
         $(document).ready(function() {
             var $window = $(window),
                 $body = $('body'),
@@ -74,7 +94,7 @@
                 zapAnchors();
                 $fullpage.fullpage({
                     navigation: false,
-                    anchors: ['home', 'logos', 'print', 'digital', 'icons-infographics', 'packaging-products', 'pie-in-the-sky', 'new-york-academy-of-sciences', 'the-new-york-times', 'about', 'clients', 'careers', 'contact'],
+                    anchors: window.anchors,
                     animateAnchor: false,
                     scrollingSpeed: 700,
                     touchSensitivity: 35,
