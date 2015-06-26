@@ -125,6 +125,15 @@
     }
   }
 
+  &.lg-single-col{
+    @media only screen and (max-width: $desktop-width){
+      .col{
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
   /* inline-block rows for top menus, etc. */
 
   &.inline-block{

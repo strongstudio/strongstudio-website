@@ -16,12 +16,12 @@
         </aside>
     </div>
     <a id="afterhome" class="anchorLink"></a>
-            
+    <a name="services" class="anchorLink"></a>        
     <?php foreach($pages->find('services')->children() as $section) {
             snippet('service', array('data' => $section));
     }
     ?>
-    
+    <a name="casestudies" class="anchorLink"></a>
     <?php foreach($pages->find('casestudies')->children() as $section) {
             snippet('casestudy', array('data' => $section));
     }

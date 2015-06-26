@@ -2,7 +2,7 @@
 
 <div class="section careers" data-title="Careers">
     <div class="slide section-heading">
-        <div class="wrapper row med-single-col">
+        <div class="wrapper row lg-single-col">
             <div class="col one-of-two">
                 <h1>Careers</h1>
             </div>
@@ -18,7 +18,7 @@
                 <div class="col one-of-two">
                     <div class="job-description">
                         <h3>Web Development:</h3>
-                        <p>Our web developers work closely with our designers to build websites, apps, and all things digital. WeÕre looking for someone who can actively engage in client meetings about web development, consult for functionality, develop websites with easy-to-edit CMS, and multitask between multiple projects.</p>
+                        <p>Our web developers work closely with our designers to build websites, apps, and all things digital. Weï¿½re looking for someone who can actively engage in client meetings about web development, consult for functionality, develop websites with easy-to-edit CMS, and multitask between multiple projects.</p>
                         <h4>What it takes:</h4>
                         <ul>
                             <li>Minimum of 3 years experience working with HTML5, CSS3, jQuery, Javascript and PHP</li>
@@ -38,7 +38,7 @@
                 <div class="col one-of-two">
                     <div class="job-description">
                         <h3>Web Design:</h3>
-                        <p>Do you have a deep passion and understanding of print and digital design? Do you proudly refer to yourself as a Type Nerd? Perfect. At Strong Studio, you will flex your creative muscles, designing everything from logos to websites, packaging to print...youÕll do it all. But you must be willing to take creative risks, experiment with ideas and approaches, and create the best work possible in a collaborative environment.</p>
+                        <p>Do you have a deep passion and understanding of print and digital design? Do you proudly refer to yourself as a Type Nerd? Perfect. At Strong Studio, you will flex your creative muscles, designing everything from logos to websites, packaging to print...youï¿½ll do it all. But you must be willing to take creative risks, experiment with ideas and approaches, and create the best work possible in a collaborative environment.</p>
                         <h4>The Right Stuff</h4>
                         <ul>
                             <li>Minimum of 2 years experience</li>

@@ -31,26 +31,24 @@
                     <h3>Menu:</h3>
                     <ul class="primary">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="">Services</a>
+                        <li><a href="#services">Services</a>
                             <ul class="secondary">
-                                <li><a href="#logos">Logos</a></li>
-                                <li><a href="#print">Print</a></li>
-                                <li><a href="">Digital</a></li>
-                                <li><a href="">Icons</a></li>
-                                <li><a href="">Products &amp; Packaging</a></li>
+                                <?php foreach ($pages->find('services')->children() as $page){
+                                    echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
+                                } ?>
                             </ul>
                         </li>
                         <li><a href="">Case Studies</a>
                             <ul class="secondary">
-                                <li><a href="">Pie in the Sky</a></li>
-                                <li><a href="">The New York Academy of Sciences</a></li>
-                                <li><a href="">The New York Times</a></li>
+                                <?php foreach ($pages->find('casestudies')->children() as $page){
+                                    echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
+                                } ?>
                             </ul>
                         </li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Clients</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </section>
                 <section class="nav-contact col one-of-four">

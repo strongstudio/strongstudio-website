@@ -818,7 +818,14 @@ th {
     margin-left: 0 !important;
   }
 }
-/* line 130, ../../sass/_grid.scss */
+@media only screen and (max-width: 960px) {
+  /* line 130, ../../sass/_grid.scss */
+  .row.lg-single-col .col {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+/* line 139, ../../sass/_grid.scss */
 .row.inline-block {
   text-align: justify;
 }
@@ -834,11 +841,11 @@ th {
 .row.inline-block > * {
   display: inline-block;
 }
-/* line 132, ../../sass/_grid.scss */
+/* line 141, ../../sass/_grid.scss */
 .row.inline-block .col {
   margin-left: 0;
 }
-/* line 134, ../../sass/_grid.scss */
+/* line 143, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-two {
   width: 50%;
   margin: 0;
@@ -851,7 +858,7 @@ th {
 .row.inline-block .col.one-of-two:first-child {
   margin-left: 0;
 }
-/* line 137, ../../sass/_grid.scss */
+/* line 146, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-three {
   width: 33.33333%;
   margin: 0;
@@ -864,7 +871,7 @@ th {
 .row.inline-block .col.one-of-three:first-child {
   margin-left: 0;
 }
-/* line 140, ../../sass/_grid.scss */
+/* line 149, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-four {
   width: 25%;
   margin: 0;
@@ -877,7 +884,7 @@ th {
 .row.inline-block .col.one-of-four:first-child {
   margin-left: 0;
 }
-/* line 143, ../../sass/_grid.scss */
+/* line 152, ../../sass/_grid.scss */
 .row.inline-block .col.three-of-four {
   width: 75%;
   margin: 0;
@@ -1610,77 +1617,85 @@ body.mobile .full-bleed img {
 }
 
 /* line 539, ../../sass/main.scss */
+.about .section-heading {
+  background-image: url(../assets/images/ssnyc_about_chapter-cover.jpg);
+}
+/* line 542, ../../sass/main.scss */
 .about .col {
   vertical-align: top;
 }
-/* line 543, ../../sass/main.scss */
+/* line 546, ../../sass/main.scss */
 .about .staff header {
   padding: 30px 0 30px 120px;
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 549, ../../sass/main.scss */
+/* line 552, ../../sass/main.scss */
 .about .staff h3 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 553, ../../sass/main.scss */
+/* line 556, ../../sass/main.scss */
 .about .staff .title {
   color: #f48029;
 }
-/* line 556, ../../sass/main.scss */
+/* line 559, ../../sass/main.scss */
 .about .staff.matthew header {
   background-image: url(../assets/images/01_ssnyc_about_ms.png);
 }
-/* line 559, ../../sass/main.scss */
+/* line 562, ../../sass/main.scss */
 .about .staff.linda header {
   background-image: url(../assets/images/02_ssnyc_about_ls.png);
 }
-/* line 562, ../../sass/main.scss */
+/* line 565, ../../sass/main.scss */
 .about .staff.kate header {
   background-image: url(../assets/images/03_ssnyc_about_ka.png);
 }
-/* line 565, ../../sass/main.scss */
+/* line 568, ../../sass/main.scss */
 .about .staff.alyssa header {
   background-image: url(../assets/images/05_ssnyc_about_ap.png);
 }
-/* line 568, ../../sass/main.scss */
+/* line 571, ../../sass/main.scss */
 .about .staff.sam header {
   background-image: url(../assets/images/04_ssnyc_about_sa.png);
 }
-/* line 571, ../../sass/main.scss */
+/* line 574, ../../sass/main.scss */
 .about .staff.caitlyn header {
   background-image: url(../assets/images/06_ssnyc_about_cb.png);
 }
 
-/* line 578, ../../sass/main.scss */
+/* line 581, ../../sass/main.scss */
 .clients h2 {
   font-size: 3rem;
   margin-bottom: .5em;
   font-family: Enclave-thin, serif;
 }
-/* line 583, ../../sass/main.scss */
+/* line 586, ../../sass/main.scss */
 .clients .section-heading {
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
   background-position: bottom left;
 }
-/* line 587, ../../sass/main.scss */
+/* line 590, ../../sass/main.scss */
 .clients .col {
   vertical-align: top;
 }
 
-/* line 592, ../../sass/main.scss */
+/* line 595, ../../sass/main.scss */
 .contact .section-heading {
   background: #ccc;
   color: #888b8d;
 }
 
-/* line 598, ../../sass/main.scss */
+/* line 601, ../../sass/main.scss */
+.careers .section-heading {
+  background-image: url(../assets/images/ssnyc_careers_chapter-cover.jpg);
+}
+/* line 604, ../../sass/main.scss */
 .careers .col {
   vertical-align: top;
 }
-/* line 603, ../../sass/main.scss */
+/* line 609, ../../sass/main.scss */
 .careers .job-description h3 {
   font-size: 1em;
   color: #f48029;
@@ -1688,21 +1703,21 @@ body.mobile .full-bleed img {
   border-bottom: 1px solid #f48029;
   padding-bottom: .5em;
 }
-/* line 610, ../../sass/main.scss */
+/* line 616, ../../sass/main.scss */
 .careers .job-description h4 {
   padding: 0;
   margin: 0 0 .5em 0;
 }
-/* line 614, ../../sass/main.scss */
+/* line 620, ../../sass/main.scss */
 .careers .job-description ul {
   padding: 1em;
 }
-/* line 617, ../../sass/main.scss */
+/* line 623, ../../sass/main.scss */
 .careers .job-description p {
   color: #f48029;
   font-size: .875em;
 }
-/* line 621, ../../sass/main.scss */
+/* line 627, ../../sass/main.scss */
 .careers .job-description li {
   font-size: .875em;
   line-height: 1.25em;

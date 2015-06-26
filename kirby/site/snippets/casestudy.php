@@ -1,7 +1,7 @@
 <a class="anchorLink" name="<?php echo $data->uid(); ?>"></a>
 <div class="section  <?php echo $data->uid(); ?>" data-title="<?php echo ucfirst($data->title()->html()); ?>">
     <div class="slide section-heading" style="background: #<?php echo $data->bgcolor();?>">
-        <div class="wrapper row med-single-col">
+        <div class="wrapper row lg-single-col">
             <div class="col one-of-two">
                 <div class="cs-title">
                     <span class="cs">CASE STUDY:</span>
