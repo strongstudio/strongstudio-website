@@ -323,7 +323,7 @@ body.mobile #down-arrow{
 // SECTIONS AND SLIDES
 
 body.mobile .section{
-  padding-bottom: 4em;
+  //padding-bottom: 4em;
   .slide{
     padding-top: 4em;
     &.section-heading{
@@ -493,6 +493,7 @@ body.mobile .full-bleed img{
     display: block;
     font-size: 2em;
     text-align: right;
+    margin-bottom: .5em;
   }
   h2{
     font-family: Enclave-thin, serif;
@@ -503,8 +504,26 @@ body.mobile .full-bleed img{
   }
 }
 
+body.mobile{
+  .cs-title{
+    .cs{
+      padding-top: 2em;
+    }
+    .cs, h2{
+      text-align: left;
+      line-height: 1em;
+    }
+  }
+}
+
 .icons-infographics h1, .packaging-products h1{
   font-size: 90px;
+}
+
+body.mobile {
+  .icons-infographics h1, .packaging-products h1{
+    font-size: 56px;
+  }
 }
 
 .case-study-slide{
@@ -582,6 +601,7 @@ body.mobile .full-bleed img{
     font-size: 3rem;
     margin-bottom: .5em;
     font-family: Enclave-thin, serif;
+    line-height: 1em;
   }
   .section-heading{
     background-image: url(../assets/images/ssnyc_clients_cover.jpg);
@@ -589,6 +609,12 @@ body.mobile .full-bleed img{
   }
   .col{
     vertical-align: top;
+  }
+}
+
+body.mobile .clients{
+  h2{
+    padding-top: 2em;
   }
 }
 

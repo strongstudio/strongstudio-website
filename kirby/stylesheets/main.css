@@ -665,7 +665,11 @@ th {
   margin-left: 0;
   padding-left: 0 !important;
 }
-/* line 54, ../../sass/_grid.scss */
+/* line 51, ../../sass/_grid.scss */
+.row .col:last-child {
+  padding-right: 0 !important;
+}
+/* line 57, ../../sass/_grid.scss */
 .row .col.one-of-two {
   width: 50%;
   margin: 0;
@@ -678,7 +682,7 @@ th {
 .row .col.one-of-two:first-child {
   margin-left: 0;
 }
-/* line 58, ../../sass/_grid.scss */
+/* line 61, ../../sass/_grid.scss */
 .row .col.one-of-three {
   width: 33.33333%;
   margin: 0;
@@ -691,7 +695,7 @@ th {
 .row .col.one-of-three:first-child {
   margin-left: 0;
 }
-/* line 62, ../../sass/_grid.scss */
+/* line 65, ../../sass/_grid.scss */
 .row .col.two-of-three {
   width: 66.66667%;
   margin: 0;
@@ -704,7 +708,7 @@ th {
 .row .col.two-of-three:first-child {
   margin-left: 0;
 }
-/* line 66, ../../sass/_grid.scss */
+/* line 69, ../../sass/_grid.scss */
 .row .col.two-of-four {
   width: 50%;
   margin: 0;
@@ -717,7 +721,7 @@ th {
 .row .col.two-of-four:first-child {
   margin-left: 0;
 }
-/* line 70, ../../sass/_grid.scss */
+/* line 73, ../../sass/_grid.scss */
 .row .col.one-of-four {
   width: 25%;
   margin: 0;
@@ -730,7 +734,7 @@ th {
 .row .col.one-of-four:first-child {
   margin-left: 0;
 }
-/* line 74, ../../sass/_grid.scss */
+/* line 77, ../../sass/_grid.scss */
 .row .col.three-of-four {
   width: 75%;
   margin: 0;
@@ -744,12 +748,12 @@ th {
   margin-left: 0;
 }
 @media only screen and (max-width: 50em) {
-  /* line 80, ../../sass/_grid.scss */
+  /* line 83, ../../sass/_grid.scss */
   .row .col.med-full-width {
     width: 100%;
     margin-left: 0;
   }
-  /* line 85, ../../sass/_grid.scss */
+  /* line 88, ../../sass/_grid.scss */
   .row .col.med-one-of-two {
     width: 50%;
     margin: 0;
@@ -762,12 +766,12 @@ th {
   .row .col.med-one-of-two:first-child {
     margin-left: 0;
   }
-  /* line 87, ../../sass/_grid.scss */
+  /* line 90, ../../sass/_grid.scss */
   .row .col.med-one-of-two:nth-child(2n+1) {
     clear: both;
     margin-left: 0;
   }
-  /* line 92, ../../sass/_grid.scss */
+  /* line 95, ../../sass/_grid.scss */
   .row .col.med-one-of-three {
     width: 33.33333%;
     margin: 0;
@@ -780,12 +784,12 @@ th {
   .row .col.med-one-of-three:first-child {
     margin-left: 0;
   }
-  /* line 94, ../../sass/_grid.scss */
+  /* line 97, ../../sass/_grid.scss */
   .row .col.med-one-of-three:nth-child(3n+1) {
     clear: both;
     margin-left: 0;
   }
-  /* line 99, ../../sass/_grid.scss */
+  /* line 102, ../../sass/_grid.scss */
   .row .col.med-two-of-three {
     width: 66.66667%;
     margin: 0;
@@ -798,34 +802,34 @@ th {
   .row .col.med-two-of-three:first-child {
     margin-left: 0;
   }
-  /* line 101, ../../sass/_grid.scss */
+  /* line 104, ../../sass/_grid.scss */
   .row .col.med-two-of-three:nth-child(3n+1) {
     clear: both;
     margin-left: 0;
   }
 }
 @media only screen and (max-width: 30em) {
-  /* line 112, ../../sass/_grid.scss */
+  /* line 115, ../../sass/_grid.scss */
   .row.sm-single-col .col {
     width: 100% !important;
     margin-left: 0 !important;
   }
 }
 @media only screen and (max-width: 50em) {
-  /* line 121, ../../sass/_grid.scss */
+  /* line 124, ../../sass/_grid.scss */
   .row.med-single-col .col {
     width: 100% !important;
-    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 }
 @media only screen and (max-width: 960px) {
-  /* line 130, ../../sass/_grid.scss */
+  /* line 133, ../../sass/_grid.scss */
   .row.lg-single-col .col {
     width: 100% !important;
-    margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 }
-/* line 139, ../../sass/_grid.scss */
+/* line 142, ../../sass/_grid.scss */
 .row.inline-block {
   text-align: justify;
 }
@@ -841,11 +845,11 @@ th {
 .row.inline-block > * {
   display: inline-block;
 }
-/* line 141, ../../sass/_grid.scss */
+/* line 144, ../../sass/_grid.scss */
 .row.inline-block .col {
   margin-left: 0;
 }
-/* line 143, ../../sass/_grid.scss */
+/* line 146, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-two {
   width: 50%;
   margin: 0;
@@ -858,7 +862,7 @@ th {
 .row.inline-block .col.one-of-two:first-child {
   margin-left: 0;
 }
-/* line 146, ../../sass/_grid.scss */
+/* line 149, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-three {
   width: 33.33333%;
   margin: 0;
@@ -871,7 +875,7 @@ th {
 .row.inline-block .col.one-of-three:first-child {
   margin-left: 0;
 }
-/* line 149, ../../sass/_grid.scss */
+/* line 152, ../../sass/_grid.scss */
 .row.inline-block .col.one-of-four {
   width: 25%;
   margin: 0;
@@ -884,7 +888,7 @@ th {
 .row.inline-block .col.one-of-four:first-child {
   margin-left: 0;
 }
-/* line 152, ../../sass/_grid.scss */
+/* line 155, ../../sass/_grid.scss */
 .row.inline-block .col.three-of-four {
   width: 75%;
   margin: 0;
@@ -1369,10 +1373,6 @@ body.mobile #down-arrow {
   background-image: url(../assets/images/arrow-right.svg);
 }
 
-/* line 325, ../../sass/main.scss */
-body.mobile .section {
-  padding-bottom: 4em;
-}
 /* line 327, ../../sass/main.scss */
 body.mobile .section .slide {
   padding-top: 4em;
@@ -1569,8 +1569,9 @@ body.mobile .full-bleed img {
   display: block;
   font-size: 2em;
   text-align: right;
+  margin-bottom: .5em;
 }
-/* line 497, ../../sass/main.scss */
+/* line 498, ../../sass/main.scss */
 .cs-title h2 {
   font-family: Enclave-thin, serif;
   font-size: 4em;
@@ -1579,16 +1580,31 @@ body.mobile .full-bleed img {
   text-align: right;
 }
 
-/* line 506, ../../sass/main.scss */
+/* line 509, ../../sass/main.scss */
+body.mobile .cs-title .cs {
+  padding-top: 2em;
+}
+/* line 512, ../../sass/main.scss */
+body.mobile .cs-title .cs, body.mobile .cs-title h2 {
+  text-align: left;
+  line-height: 1em;
+}
+
+/* line 519, ../../sass/main.scss */
 .icons-infographics h1, .packaging-products h1 {
   font-size: 90px;
 }
 
-/* line 511, ../../sass/main.scss */
+/* line 524, ../../sass/main.scss */
+body.mobile .icons-infographics h1, body.mobile .packaging-products h1 {
+  font-size: 56px;
+}
+
+/* line 530, ../../sass/main.scss */
 .case-study-slide .row .col {
   vertical-align: top;
 }
-/* line 514, ../../sass/main.scss */
+/* line 533, ../../sass/main.scss */
 .case-study-slide dt {
   width: 100%;
   border-bottom: 1px solid #f48029;
@@ -1596,106 +1612,112 @@ body.mobile .full-bleed img {
   text-transform: uppercase;
   color: #f48029;
 }
-/* line 520, ../../sass/main.scss */
+/* line 539, ../../sass/main.scss */
 .case-study-slide dt:after {
   content: ":";
 }
-/* line 524, ../../sass/main.scss */
+/* line 543, ../../sass/main.scss */
 .case-study-slide dd {
   margin: 1rem 0 3rem 0;
   color: #888b8d;
 }
-/* line 527, ../../sass/main.scss */
+/* line 546, ../../sass/main.scss */
 .case-study-slide dd:last-child {
   margin-bottom: 0;
 }
-/* line 530, ../../sass/main.scss */
+/* line 549, ../../sass/main.scss */
 .case-study-slide dd q {
   color: #f48029;
   font-family: Enclave-thin, serif;
   font-size: 1.5em;
 }
 
-/* line 539, ../../sass/main.scss */
+/* line 558, ../../sass/main.scss */
 .about .section-heading {
   background-image: url(../assets/images/ssnyc_about_chapter-cover.jpg);
 }
-/* line 542, ../../sass/main.scss */
+/* line 561, ../../sass/main.scss */
 .about .col {
   vertical-align: top;
 }
-/* line 546, ../../sass/main.scss */
+/* line 565, ../../sass/main.scss */
 .about .staff header {
   padding: 30px 0 30px 120px;
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 552, ../../sass/main.scss */
+/* line 571, ../../sass/main.scss */
 .about .staff h3 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 556, ../../sass/main.scss */
+/* line 575, ../../sass/main.scss */
 .about .staff .title {
   color: #f48029;
 }
-/* line 559, ../../sass/main.scss */
+/* line 578, ../../sass/main.scss */
 .about .staff.matthew header {
   background-image: url(../assets/images/01_ssnyc_about_ms.png);
 }
-/* line 562, ../../sass/main.scss */
+/* line 581, ../../sass/main.scss */
 .about .staff.linda header {
   background-image: url(../assets/images/02_ssnyc_about_ls.png);
 }
-/* line 565, ../../sass/main.scss */
+/* line 584, ../../sass/main.scss */
 .about .staff.kate header {
   background-image: url(../assets/images/03_ssnyc_about_ka.png);
 }
-/* line 568, ../../sass/main.scss */
+/* line 587, ../../sass/main.scss */
 .about .staff.alyssa header {
   background-image: url(../assets/images/05_ssnyc_about_ap.png);
 }
-/* line 571, ../../sass/main.scss */
+/* line 590, ../../sass/main.scss */
 .about .staff.sam header {
   background-image: url(../assets/images/04_ssnyc_about_sa.png);
 }
-/* line 574, ../../sass/main.scss */
+/* line 593, ../../sass/main.scss */
 .about .staff.caitlyn header {
   background-image: url(../assets/images/06_ssnyc_about_cb.png);
 }
 
-/* line 581, ../../sass/main.scss */
+/* line 600, ../../sass/main.scss */
 .clients h2 {
   font-size: 3rem;
   margin-bottom: .5em;
   font-family: Enclave-thin, serif;
+  line-height: 1em;
 }
-/* line 586, ../../sass/main.scss */
+/* line 606, ../../sass/main.scss */
 .clients .section-heading {
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
   background-position: bottom left;
 }
-/* line 590, ../../sass/main.scss */
+/* line 610, ../../sass/main.scss */
 .clients .col {
   vertical-align: top;
 }
 
-/* line 595, ../../sass/main.scss */
+/* line 616, ../../sass/main.scss */
+body.mobile .clients h2 {
+  padding-top: 2em;
+}
+
+/* line 621, ../../sass/main.scss */
 .contact .section-heading {
   background: #ccc;
   color: #888b8d;
 }
 
-/* line 601, ../../sass/main.scss */
+/* line 627, ../../sass/main.scss */
 .careers .section-heading {
   background-image: url(../assets/images/ssnyc_careers_chapter-cover.jpg);
 }
-/* line 604, ../../sass/main.scss */
+/* line 630, ../../sass/main.scss */
 .careers .col {
   vertical-align: top;
 }
-/* line 609, ../../sass/main.scss */
+/* line 635, ../../sass/main.scss */
 .careers .job-description h3 {
   font-size: 1em;
   color: #f48029;
@@ -1703,21 +1725,21 @@ body.mobile .full-bleed img {
   border-bottom: 1px solid #f48029;
   padding-bottom: .5em;
 }
-/* line 616, ../../sass/main.scss */
+/* line 642, ../../sass/main.scss */
 .careers .job-description h4 {
   padding: 0;
   margin: 0 0 .5em 0;
 }
-/* line 620, ../../sass/main.scss */
+/* line 646, ../../sass/main.scss */
 .careers .job-description ul {
   padding: 1em;
 }
-/* line 623, ../../sass/main.scss */
+/* line 649, ../../sass/main.scss */
 .careers .job-description p {
   color: #f48029;
   font-size: .875em;
 }
-/* line 627, ../../sass/main.scss */
+/* line 653, ../../sass/main.scss */
 .careers .job-description li {
   font-size: .875em;
   line-height: 1.25em;
