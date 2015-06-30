@@ -1,6 +1,7 @@
 <a class="anchorLink" name="<?php echo $data->uid(); ?>"></a>
 <div class="section  <?php echo $data->uid(); ?>" data-title="<?php echo ucfirst($data->title()->html()); ?>">
     <div class="slide section-heading" style="background: #<?php echo $data->bgcolor();?>">
+        <?php if($logo = $data->image('cover-logo.png')){echo '<div class="wrapper case-study-logo"><img src="'. $logo->url() .'"></div>';} ?>
         <div class="wrapper row lg-single-col">
             <div class="col one-of-two">
                 <div class="cs-title">

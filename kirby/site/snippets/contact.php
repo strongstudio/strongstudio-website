@@ -6,6 +6,7 @@
                 <img src="assets/images/ssnyc_contact_map.png">
             </div>
             <div class="col one-of-four">
+                <img class="contact-logo" src="assets/images/ssnyc_contact-logo.png">
                 hello@strongstudio.com<br>
                 Studio: (646) 873-7641<br><br>
 

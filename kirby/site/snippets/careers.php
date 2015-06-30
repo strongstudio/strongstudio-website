@@ -38,7 +38,7 @@
                 <div class="col one-of-two">
                     <div class="job-description">
                         <h3>Web Design:</h3>
-                        <p>Do you have a deep passion and understanding of print and digital design? Do you proudly refer to yourself as a Type Nerd? Perfect. At Strong Studio, you will flex your creative muscles, designing everything from logos to websites, packaging to print...you�ll do it all. But you must be willing to take creative risks, experiment with ideas and approaches, and create the best work possible in a collaborative environment.</p>
+                        <p>Do you have a deep passion and understanding of print and digital design? Do you proudly refer to yourself as a Type Nerd? Perfect. At Strong Studio, you will flex your creative muscles, designing everything from logos to websites, packaging to print...you'll do it all. But you must be willing to take creative risks, experiment with ideas and approaches, and create the best work possible in a collaborative environment.</p>
                         <h4>The Right Stuff</h4>
                         <ul>
                             <li>Minimum of 2 years experience</li>

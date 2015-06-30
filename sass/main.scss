@@ -526,6 +526,15 @@ body.mobile {
   }
 }
 
+.case-study-logo{
+  text-align: center;
+  padding-bottom: 2em;
+  img{
+    max-height: 75px;
+    width: auto;
+  }
+}
+
 .case-study-slide{
   .row .col{
     vertical-align: top;
@@ -618,10 +627,19 @@ body.mobile .clients{
   }
 }
 
-.contact .section-heading{
-  background: #ccc;
-  color: $grey;
+
+.contact{
+  .section-heading{
+    background: #ccc;
+    color: $grey;
+  }
+  .contact-logo{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
 }
+
 
 .careers{
   .section-heading{

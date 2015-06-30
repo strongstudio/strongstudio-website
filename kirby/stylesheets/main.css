@@ -1600,11 +1600,22 @@ body.mobile .icons-infographics h1, body.mobile .packaging-products h1 {
   font-size: 56px;
 }
 
-/* line 530, ../../sass/main.scss */
+/* line 529, ../../sass/main.scss */
+.case-study-logo {
+  text-align: center;
+  padding-bottom: 2em;
+}
+/* line 532, ../../sass/main.scss */
+.case-study-logo img {
+  max-height: 75px;
+  width: auto;
+}
+
+/* line 539, ../../sass/main.scss */
 .case-study-slide .row .col {
   vertical-align: top;
 }
-/* line 533, ../../sass/main.scss */
+/* line 542, ../../sass/main.scss */
 .case-study-slide dt {
   width: 100%;
   border-bottom: 1px solid #f48029;
@@ -1612,112 +1623,118 @@ body.mobile .icons-infographics h1, body.mobile .packaging-products h1 {
   text-transform: uppercase;
   color: #f48029;
 }
-/* line 539, ../../sass/main.scss */
+/* line 548, ../../sass/main.scss */
 .case-study-slide dt:after {
   content: ":";
 }
-/* line 543, ../../sass/main.scss */
+/* line 552, ../../sass/main.scss */
 .case-study-slide dd {
   margin: 1rem 0 3rem 0;
   color: #888b8d;
 }
-/* line 546, ../../sass/main.scss */
+/* line 555, ../../sass/main.scss */
 .case-study-slide dd:last-child {
   margin-bottom: 0;
 }
-/* line 549, ../../sass/main.scss */
+/* line 558, ../../sass/main.scss */
 .case-study-slide dd q {
   color: #f48029;
   font-family: Enclave-thin, serif;
   font-size: 1.5em;
 }
 
-/* line 558, ../../sass/main.scss */
+/* line 567, ../../sass/main.scss */
 .about .section-heading {
   background-image: url(../assets/images/ssnyc_about_chapter-cover.jpg);
 }
-/* line 561, ../../sass/main.scss */
+/* line 570, ../../sass/main.scss */
 .about .col {
   vertical-align: top;
 }
-/* line 565, ../../sass/main.scss */
+/* line 574, ../../sass/main.scss */
 .about .staff header {
   padding: 30px 0 30px 120px;
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* line 571, ../../sass/main.scss */
+/* line 580, ../../sass/main.scss */
 .about .staff h3 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 575, ../../sass/main.scss */
+/* line 584, ../../sass/main.scss */
 .about .staff .title {
   color: #f48029;
 }
-/* line 578, ../../sass/main.scss */
+/* line 587, ../../sass/main.scss */
 .about .staff.matthew header {
   background-image: url(../assets/images/01_ssnyc_about_ms.png);
 }
-/* line 581, ../../sass/main.scss */
+/* line 590, ../../sass/main.scss */
 .about .staff.linda header {
   background-image: url(../assets/images/02_ssnyc_about_ls.png);
 }
-/* line 584, ../../sass/main.scss */
+/* line 593, ../../sass/main.scss */
 .about .staff.kate header {
   background-image: url(../assets/images/03_ssnyc_about_ka.png);
 }
-/* line 587, ../../sass/main.scss */
+/* line 596, ../../sass/main.scss */
 .about .staff.alyssa header {
   background-image: url(../assets/images/05_ssnyc_about_ap.png);
 }
-/* line 590, ../../sass/main.scss */
+/* line 599, ../../sass/main.scss */
 .about .staff.sam header {
   background-image: url(../assets/images/04_ssnyc_about_sa.png);
 }
-/* line 593, ../../sass/main.scss */
+/* line 602, ../../sass/main.scss */
 .about .staff.caitlyn header {
   background-image: url(../assets/images/06_ssnyc_about_cb.png);
 }
 
-/* line 600, ../../sass/main.scss */
+/* line 609, ../../sass/main.scss */
 .clients h2 {
   font-size: 3rem;
   margin-bottom: .5em;
   font-family: Enclave-thin, serif;
   line-height: 1em;
 }
-/* line 606, ../../sass/main.scss */
+/* line 615, ../../sass/main.scss */
 .clients .section-heading {
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
   background-position: bottom left;
 }
-/* line 610, ../../sass/main.scss */
+/* line 619, ../../sass/main.scss */
 .clients .col {
   vertical-align: top;
 }
 
-/* line 616, ../../sass/main.scss */
+/* line 625, ../../sass/main.scss */
 body.mobile .clients h2 {
   padding-top: 2em;
 }
 
-/* line 621, ../../sass/main.scss */
+/* line 632, ../../sass/main.scss */
 .contact .section-heading {
   background: #ccc;
   color: #888b8d;
 }
+/* line 636, ../../sass/main.scss */
+.contact .contact-logo {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
 
-/* line 627, ../../sass/main.scss */
+/* line 645, ../../sass/main.scss */
 .careers .section-heading {
   background-image: url(../assets/images/ssnyc_careers_chapter-cover.jpg);
 }
-/* line 630, ../../sass/main.scss */
+/* line 648, ../../sass/main.scss */
 .careers .col {
   vertical-align: top;
 }
-/* line 635, ../../sass/main.scss */
+/* line 653, ../../sass/main.scss */
 .careers .job-description h3 {
   font-size: 1em;
   color: #f48029;
@@ -1725,21 +1742,21 @@ body.mobile .clients h2 {
   border-bottom: 1px solid #f48029;
   padding-bottom: .5em;
 }
-/* line 642, ../../sass/main.scss */
+/* line 660, ../../sass/main.scss */
 .careers .job-description h4 {
   padding: 0;
   margin: 0 0 .5em 0;
 }
-/* line 646, ../../sass/main.scss */
+/* line 664, ../../sass/main.scss */
 .careers .job-description ul {
   padding: 1em;
 }
-/* line 649, ../../sass/main.scss */
+/* line 667, ../../sass/main.scss */
 .careers .job-description p {
   color: #f48029;
   font-size: .875em;
 }
-/* line 653, ../../sass/main.scss */
+/* line 671, ../../sass/main.scss */
 .careers .job-description li {
   font-size: .875em;
   line-height: 1.25em;
