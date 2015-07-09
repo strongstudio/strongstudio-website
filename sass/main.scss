@@ -7,6 +7,7 @@
 
 body{
   font-family: 'Apercu-light', sans-serif;
+  color: $text-dark;
 }
 
 h1{
@@ -506,9 +507,6 @@ body.mobile .full-bleed img{
 
 body.mobile{
   .cs-title{
-    .cs{
-      padding-top: 2em;
-    }
     .cs, h2{
       text-align: left;
       line-height: 1em;
@@ -517,7 +515,11 @@ body.mobile{
 }
 
 .icons-infographics h1, .packaging-products h1{
-  font-size: 90px;
+  font-size: 85px;
+}
+
+.careers h1{
+  font-size: 145px;
 }
 
 body.mobile {
@@ -534,6 +536,20 @@ body.mobile {
     width: auto;
   }
 }
+
+body.mobile{
+  .case-study-logo{
+    padding-top: 2em;
+    width: 100px;
+    img{
+      max-width: 100%;
+    }
+  }
+  .cs{
+    padding-top: 0px;
+  }
+}
+
 
 .case-study-slide{
   .row .col{
@@ -606,6 +622,7 @@ body.mobile {
 }
 
 .clients{
+  background-image: url(../assets/images/ssnyc_clients_cover.jpg);
   h2{
     font-size: 3rem;
     margin-bottom: .5em;
@@ -613,7 +630,6 @@ body.mobile {
     line-height: 1em;
   }
   .section-heading{
-    background-image: url(../assets/images/ssnyc_clients_cover.jpg);
     background-position: bottom left;
   }
   .col{
@@ -629,8 +645,8 @@ body.mobile .clients{
 
 
 .contact{
+  background: #ccc;
   .section-heading{
-    background: #ccc;
     color: $grey;
   }
   .contact-logo{
@@ -660,6 +676,7 @@ body.mobile .clients{
     h4{
       padding:0;
       margin: 0 0 .5em 0;
+      text-transform: uppercase;
     }
     ul{
       padding: 1em;

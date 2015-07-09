@@ -1,6 +1,6 @@
 <a class="anchorLink" name="clients"></a>
 <div class="section clients" data-title="Clients">
-    <div class="slide section-heading">
+    <div class="section-heading">
         <h2 class="wrapper">We work with great companies</h2>
         <div class="wrapper row med-single-col">
             

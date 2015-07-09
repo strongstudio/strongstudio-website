@@ -1,6 +1,6 @@
 <a class="anchorLink" name="contact"></a>
 <div class="section contact" data-title="Contact">
-    <div class="slide section-heading">
+    <div class="section-heading">
         <div class="wrapper row med-single-col">
             <div class="col three-of-four">
                 <img src="assets/images/ssnyc_contact_map.png">

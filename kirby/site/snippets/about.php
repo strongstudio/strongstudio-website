@@ -31,7 +31,7 @@
                             <h3>Linda Sue Strong</h3>
                             <span class="title">project manager + copywriter</span>
                         </header>
-                        <p>Linda is responsible for the day-to-day project and budget management, working with the design team on brand consistency and workflow. Linda is also Strong Studio’s in-house copywriter, creating headlines and establishing brand voices for several of Strong Studio’s clients including The New York Times and Benjamin Moore.</p>
+                        <p>Linda is responsible for the day-to-day project and budget management, working with the design team on brand consistency and workflow. Linda is also Strong Studio's in-house copywriter, creating headlines and establishing brand voices for several of Strong Studio's clients including The New York Times and Benjamin Moore.</p>
                         <p>A graduate of The Cooper Union for the Advancement of Science and Art, Linda began her career designing print and environmental graphics for the arts and entertainment industry including The New York Philharmonic, Carnegie Hall, and American Theatre. Linda later obtained her law degree from the Benjamin N. Cardozo School of Law where she specialized in intellectual property law. After several years as a litigator, she returned to the design industry to help manage and grow Strong Studio.</p>
                     </div>
                 </div>

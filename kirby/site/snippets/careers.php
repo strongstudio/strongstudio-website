@@ -2,12 +2,12 @@
 
 <div class="section careers" data-title="Careers">
     <div class="slide section-heading">
-        <div class="wrapper row lg-single-col">
+        <div class="wrapper row med-single-col">
             <div class="col one-of-two">
                 <h1>Careers</h1>
             </div>
             <div class="col one-of-two border-left">
-                <p class="tagline">Need Copy</p>
+                <p class="tagline">Need copy need copy need copy need copy need copy need copy</p>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
                 <div class="col one-of-two">
                     <div class="job-description">
                         <h3>Web Development:</h3>
-                        <p>Our web developers work closely with our designers to build websites, apps, and all things digital. We�re looking for someone who can actively engage in client meetings about web development, consult for functionality, develop websites with easy-to-edit CMS, and multitask between multiple projects.</p>
+                        <p>Our web developers work closely with our designers to build websites, apps, and all things digital. We're looking for someone who can actively engage in client meetings about web development, consult for functionality, develop websites with easy-to-edit CMS, and multitask between multiple projects.</p>
                         <h4>What it takes:</h4>
                         <ul>
                             <li>Minimum of 3 years experience working with HTML5, CSS3, jQuery, Javascript and PHP</li>
