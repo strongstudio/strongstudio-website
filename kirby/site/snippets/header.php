@@ -65,11 +65,11 @@
                 </section>
                 <section class="nav-connect col one-of-four">
                     <h3>Connect:</h3>
-                    <a class="social-link tumblr" href="#">Strong Studio Snippets</a>
-                    <a class="social-link facebook" href="#">Give us a Like</a>
-                    <a class="social-link twitter" href="#">We're Tweeters</a>
-                    <a class="social-link instagram" href="#">#StrongStudioNYC</a>
-                    <a class="social-link linkedin" href="#">Profesh'</a>
+                    <a class="social-link tumblr" href="http://strongstudionyc.tumblr.com/" target="_blank">Strong Studio Snippets</a>
+                    <a class="social-link facebook" href="https://www.facebook.com/strongstudio" target="_blank">Give us a Like</a>
+                    <a class="social-link twitter" href="https://twitter.com/StrongStudioNYC" target="_blank">We're Tweeters</a>
+                    <a class="social-link instagram" href="https://instagram.com/strongstudionyc/" target="_blank">#StrongStudioNYC</a>
+                    <a class="social-link linkedin" href="https://www.linkedin.com/company/strong-studio-nyc-llc" target="_blank">Profesh'</a>
                 </section>
             </div>
         </nav>
