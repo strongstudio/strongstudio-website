@@ -4,6 +4,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="bower_components/unveil/jquery.unveil.min.js"></script>
     <script>
         window.anchors = [
             'home',
@@ -52,6 +53,7 @@
                 sizeSectionHeadings();
                 window.addEventListener('resize', sizeSectionHeadings);
                 mobileWaypoints();
+                $('img').unveil();
                 $window.scroll(function(){
                     toggleHeaderOnScrollEfficient(window.scrollY);
                 });
