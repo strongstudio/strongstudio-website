@@ -1711,52 +1711,54 @@ body.mobile .cs {
 /* line 624, ../../sass/main.scss */
 .clients {
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
+  background-size: cover;
+  background-position: bottom left;
 }
-/* line 626, ../../sass/main.scss */
+/* line 628, ../../sass/main.scss */
 .clients h2 {
   font-size: 3rem;
   margin-bottom: .5em;
   font-family: Enclave-thin, serif;
   line-height: 1em;
 }
-/* line 632, ../../sass/main.scss */
+/* line 634, ../../sass/main.scss */
 .clients .section-heading {
   background-position: bottom left;
 }
-/* line 635, ../../sass/main.scss */
+/* line 637, ../../sass/main.scss */
 .clients .col {
   vertical-align: top;
 }
 
-/* line 641, ../../sass/main.scss */
+/* line 643, ../../sass/main.scss */
 body.mobile .clients h2 {
   padding-top: 2em;
 }
 
-/* line 647, ../../sass/main.scss */
+/* line 649, ../../sass/main.scss */
 .contact {
   background: #ccc;
 }
-/* line 649, ../../sass/main.scss */
+/* line 651, ../../sass/main.scss */
 .contact .section-heading {
   color: #888b8d;
 }
-/* line 652, ../../sass/main.scss */
+/* line 654, ../../sass/main.scss */
 .contact .contact-logo {
   display: block;
   max-width: 100%;
   margin-bottom: 2em;
 }
 
-/* line 661, ../../sass/main.scss */
+/* line 663, ../../sass/main.scss */
 .careers .section-heading {
   background-image: url(../assets/images/ssnyc_careers_chapter-cover.jpg);
 }
-/* line 664, ../../sass/main.scss */
+/* line 666, ../../sass/main.scss */
 .careers .col {
   vertical-align: top;
 }
-/* line 669, ../../sass/main.scss */
+/* line 671, ../../sass/main.scss */
 .careers .job-description h3 {
   font-size: 1em;
   color: #f48029;
@@ -1764,22 +1766,22 @@ body.mobile .clients h2 {
   border-bottom: 1px solid #f48029;
   padding-bottom: .5em;
 }
-/* line 676, ../../sass/main.scss */
+/* line 678, ../../sass/main.scss */
 .careers .job-description h4 {
   padding: 0;
   margin: 0 0 .5em 0;
   text-transform: uppercase;
 }
-/* line 681, ../../sass/main.scss */
+/* line 683, ../../sass/main.scss */
 .careers .job-description ul {
   padding: 1em;
 }
-/* line 684, ../../sass/main.scss */
+/* line 686, ../../sass/main.scss */
 .careers .job-description p {
   color: #f48029;
   font-size: .875em;
 }
-/* line 688, ../../sass/main.scss */
+/* line 690, ../../sass/main.scss */
 .careers .job-description li {
   font-size: .875em;
   line-height: 1.25em;

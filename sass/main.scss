@@ -623,6 +623,8 @@ body.mobile{
 
 .clients{
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
+  background-size: cover;
+  background-position: bottom left;
   h2{
     font-size: 3rem;
     margin-bottom: .5em;
