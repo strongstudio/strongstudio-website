@@ -13,8 +13,9 @@
     
     <?php foreach( $data->children()->visible() as $slide ) : ?>
         <?php if($slide->hasImages()){
-            if($slide->images()->count() > 2) snippet('four-images', array('data' => $slide));
-            elseif($slide->images()->count() == 2) snippet('two-images', array('data' => $slide));
+            $noBG = $slide->images()->not('bg.jpg');
+            if($noBG->count() > 2) snippet('four-images', array('data' => $slide));
+            elseif($noBG->count() == 2) snippet('two-images', array('data' => $slide));
             else snippet('one-image', array('data' => $slide));
         }?>
     <?php endforeach; ?>
