@@ -235,6 +235,9 @@ body.mobile .locationTracker{
       &.linkedin{
         background-image: url(../assets/images/icons/strongstudio_social-media_linkedin.svg);
       }
+      &.pinterest{
+        background-image: url(../assets/images/icons/strongstudio_social-media_pinterest.svg);
+      }
     }
   }
 }
@@ -361,7 +364,7 @@ body.mobile .section{
   }
 }
 
-.mobile .section-heading{
+body.mobile .section-heading{
   padding-bottom: 64px;
   height: 100%;
   .col.one-of-two{
@@ -451,10 +454,19 @@ body.fp-viewing-home{
 }
 
 
+body.mobile .section-heading{
+  background-image: none !important;
+  background: #e87722;
+}
+
+body.mobile .home.section-heading{
+  background-image: url(../assets/images/strongstudio_home_photo.jpg) !important;
+}
 
 .home.section-heading{
   background-image: url(../assets/images/strongstudio_home_photo.jpg);
 }
+
 
 .logos .slide.section-heading{
   background-image: url(../assets/images/logos/strongstudio_logos_chapter-cover.jpg);
@@ -652,9 +664,14 @@ body.mobile .clients{
   .section-heading{
     color: $grey;
   }
+  .contact-map{
+    width: 100%;
+  }
   .contact-logo{
     display: block;
-    max-width: 100%;
+    width: 90%;
+    max-width: 400px;
+    min-width: 150px;
     margin-bottom: 2em;
   }
 }
@@ -693,4 +710,15 @@ body.mobile .clients{
       line-height: 1.25em;
     }
   }
+}
+
+.back-to-top{
+  font-size: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+body.mobile .back-to-top{
+  display: none;
 }

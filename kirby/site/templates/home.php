@@ -29,7 +29,7 @@
     
     <?php snippet('about'); ?>
     <?php snippet('clients'); ?>
-    <?php snippet('careers'); ?>
+    <?php //snippet('careers'); ?>
     <?php snippet('contact'); ?>
 
 <?php snippet('footer'); ?>

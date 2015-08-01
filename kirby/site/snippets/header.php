@@ -5,7 +5,8 @@
         <meta name="description" content="Strong Studio NYC LLC is a conceptually driven design studio in SoHo creating identities, print, advertising, packaging, environmental, web and motion design.">
         <meta name="keywords" content="Strong Studio Graphic Design Web">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
@@ -47,7 +48,7 @@
                         </li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#clients">Clients</a></li>
-                        <li><a href="#careers">Careers</a></li>
+                        <!--<li><a href="#careers">Careers</a></li>-->
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </section>
@@ -70,6 +71,8 @@
                     <a class="social-link twitter" href="https://twitter.com/StrongStudioNYC" target="_blank">We're Tweeters</a>
                     <a class="social-link instagram" href="https://instagram.com/strongstudionyc/" target="_blank">#StrongStudioNYC</a>
                     <a class="social-link linkedin" href="https://www.linkedin.com/company/strong-studio-nyc-llc" target="_blank">Profesh'</a>
+                    <a class="social-link pinterest" href="https://www.pinterest.com/strongstudionyc/" target="_blank">Pinspirations</a>
+                    <a class="social-link behance" href="https://www.behance.net/strongstudio" target="_blank">More Design</a>
                 </section>
             </div>
         </nav>
