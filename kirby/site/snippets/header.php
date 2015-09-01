@@ -4,7 +4,7 @@
         <title>Strong Studio NYC LLC</title>
         <meta name="description" content="Strong Studio NYC LLC is a conceptually driven design studio in SoHo creating identities, print, advertising, packaging, environmental, web and motion design.">
         <meta name="keywords" content="Strong Studio Graphic Design Web">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=false">
         
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
@@ -32,14 +32,14 @@
                     <h3>Menu:</h3>
                     <ul class="primary">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a>
+                        <li><a href="#<?php echo $pages->find('services')->children()->first()->uid();?>">Services</a>
                             <ul class="secondary">
                                 <?php foreach ($pages->find('services')->children() as $page){
                                     echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
                                 } ?>
                             </ul>
                         </li>
-                        <li><a href="">Case Studies</a>
+                        <li><a href="#<?php echo $pages->find('casestudies')->children()->first()->uid();?>">Case Studies</a>
                             <ul class="secondary">
                                 <?php foreach ($pages->find('casestudies')->children() as $page){
                                     echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';

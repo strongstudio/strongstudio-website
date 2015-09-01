@@ -16,7 +16,7 @@
         </aside>
     </div>
     <a id="afterhome" class="anchorLink"></a>
-    <a name="services" class="anchorLink"></a>        
+    <a name="services" class="anchorLink"></a>
     <?php foreach($pages->find('services')->children() as $section) {
             snippet('service', array('data' => $section));
     }
