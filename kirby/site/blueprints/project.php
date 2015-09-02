@@ -17,3 +17,7 @@ fields:
   tags:
     label: Tags
     type:  tags
+  hidemobile:
+      label: Hide Mobile
+      type: checkbox
+      text: Check to hide on mobile devices

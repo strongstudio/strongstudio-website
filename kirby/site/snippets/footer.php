@@ -78,12 +78,6 @@
                toggleNav();
             });
 
-            //$navLinks.each(function(){
-            //    $(this).click(function(){
-            //       toggleNav();
-            //    });
-            //});
-
             $mainNav.click(function(){
                 toggleNav();
             });

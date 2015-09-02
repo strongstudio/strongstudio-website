@@ -7,6 +7,7 @@ password: >
 language: en
 role: admin
 history:
+  - services/logos/logos1
   - services/print
   - services/logos
   - casestudies/pie-in-the-sky

@@ -1821,3 +1821,8 @@ body.mobile .clients h2 {
 body.mobile .back-to-top {
   display: none;
 }
+
+/* line 726, ../../sass/main.scss */
+body.mobile .hide-mobile {
+  display: none;
+}

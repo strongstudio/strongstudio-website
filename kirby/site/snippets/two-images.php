@@ -1,4 +1,4 @@
-<div class="slide" <?php if($bgimg = $data->image('bg.jpg')) echo 'style="background-image:url('. $bgimg->url() .')"' ?>>
+<div class="slide <?php if( $data->hidemobile()->bool()){ echo ' hide-mobile'; }?>" <?php if($bgimg = $data->image('bg.jpg')) echo 'style="background-image:url('. $bgimg->url() .')"' ?>>
     <div class="wrapper">
         <div class="row med-single-col">
             <?php foreach( $data->images()->not('bg.jpg') as $image ): ?>

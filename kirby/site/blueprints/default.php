@@ -10,3 +10,7 @@ fields:
   text:
     label: Text
     type:  textarea
+  hidemobile:
+        label: Hide Mobile
+        type: checkbox
+        text: Check to hide on mobile devices
