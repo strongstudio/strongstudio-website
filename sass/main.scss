@@ -262,9 +262,9 @@ body.mobile #main-nav h3{
 #down-arrow{
   position: fixed;
   top: 99%;
-  width: 58px;
-  height: 29px;
-  background-image: url(../assets/images/down-orange.png);
+  width: 50px !important;
+  height: 32px;
+  background-image: url(../assets/images/arrow-down.svg);
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -275,6 +275,22 @@ body.mobile #main-nav h3{
 
 body.mobile #down-arrow{
   display: none;
+}
+
+@keyframes bounce{
+  0% {transform:translate(-50%, 0%)}
+  50% {transform:translate(-50%, -50%)}
+  100% {transform:translate(-50%, 0%)}
+}
+
+body.fp-viewing-home {
+  #down-arrow {
+    background-image: url(../assets/images/arrow-down-white.svg);
+    animation-name: bounce;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
 }
 
 .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev{
@@ -442,9 +458,6 @@ body.mobile{
 }
 
 body.fp-viewing-home{
-  #down-arrow{
-    background-image: url(../assets/images/down-arrow.png);
-  }
   #page-header{
     border-color: #fff;
     .header-logo{
@@ -716,7 +729,16 @@ body.mobile .clients{
   font-size: 2rem;
   position: absolute;
   bottom: 2rem;
-  right: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  img{
+    width: 47px;
+    height: 47px;
+  }
+}
+
+.fp-viewing-contact{
+  #down-arrow{display: none;}
 }
 
 body.mobile .back-to-top{

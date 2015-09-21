@@ -13,10 +13,12 @@
                 <a target="_blank" href="https://www.google.com/maps/place/222+Broadway,+New+York,+NY+10038/data=!4m2!3m1!1s0x89c25a1844394a35:0x9cde1899b5b1c114?sa=X&ved=0CB0Q8gEwAGoVChMIw9mXqM3WxwIVhj0-Ch1cYATx">
                 222 Broadway, 18th Fl.<br>
                 New York, NY 10038</a>
+                <br><br>
+                <span class="copyright">&copy;2015 Strong Studio NYC, LLC. All Rights Reserved</span>
             </div>
             
         </div>
-        <a class="back-to-top" href="#home"><i class="fa fa-chevron-circle-up"></i></a>
+        <a class="back-to-top" href="#home"><img style="width: 47px; height: 47px" src="assets/images/arrow-back-to-top.svg"></a>
     </div>
 
 
