@@ -14,7 +14,8 @@
                 222 Broadway, 18th Fl.<br>
                 New York, NY 10038</a>
                 <br><br>
-                <span class="copyright">&copy;2015 Strong Studio NYC, LLC. All Rights Reserved</span>
+                <span class="copyright">&copy; 2015 Strong Studio LLC.<br>
+                    All Rights Reserved, Member <a href="http://www.aiga.org" target="_blank">AIGA</a>
             </div>
             
         </div>
