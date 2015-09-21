@@ -1284,13 +1284,17 @@ body.mobile .locationTracker {
 #main-nav .nav-connect a.social-link.pinterest {
   background-image: url(../assets/images/icons/strongstudio_social-media_pinterest.svg);
 }
+/* line 241, ../../sass/main.scss */
+#main-nav .nav-connect a.social-link.behance {
+  background-image: url(../assets/images/icons/strongstudio_social-media_behance.svg);
+}
 
-/* line 245, ../../sass/main.scss */
+/* line 248, ../../sass/main.scss */
 body.mobile #main-nav h3 {
   display: none;
 }
 
-/* line 252, ../../sass/main.scss */
+/* line 255, ../../sass/main.scss */
 .fp-controlArrow {
   background-repeat: no-repeat;
   background-size: contain;
@@ -1301,7 +1305,7 @@ body.mobile #main-nav h3 {
   transform: translate3d(0, -25%, 0);
 }
 
-/* line 262, ../../sass/main.scss */
+/* line 265, ../../sass/main.scss */
 #down-arrow {
   position: fixed;
   top: 99%;
@@ -1316,7 +1320,7 @@ body.mobile #main-nav h3 {
   transform: translateX(-50%);
 }
 
-/* line 276, ../../sass/main.scss */
+/* line 279, ../../sass/main.scss */
 body.mobile #down-arrow {
   display: none;
 }
@@ -1332,7 +1336,7 @@ body.mobile #down-arrow {
     transform: translate(-50%, 0%);
   }
 }
-/* line 287, ../../sass/main.scss */
+/* line 290, ../../sass/main.scss */
 body.fp-viewing-home #down-arrow {
   background-image: url(../assets/images/arrow-down-white.svg);
   animation-name: bounce;
@@ -1341,12 +1345,12 @@ body.fp-viewing-home #down-arrow {
   animation-timing-function: ease-in-out;
 }
 
-/* line 296, ../../sass/main.scss */
+/* line 299, ../../sass/main.scss */
 .fp-controlArrow.fp-next, .fp-controlArrow.fp-prev {
   display: none;
 }
 
-/* line 300, ../../sass/main.scss */
+/* line 303, ../../sass/main.scss */
 .my-ControlArrow {
   position: fixed;
   z-index: 1000;
@@ -1365,70 +1369,70 @@ body.fp-viewing-home #down-arrow {
   transition: opacity 0.5s;
   opacity: 1;
 }
-/* line 313, ../../sass/main.scss */
+/* line 316, ../../sass/main.scss */
 .my-ControlArrow:hover {
   cursor: pointer;
 }
-/* line 316, ../../sass/main.scss */
+/* line 319, ../../sass/main.scss */
 .my-ControlArrow.prev {
   background-position: top left;
   background-image: url(../assets/images/arrow-left.svg);
   left: 2%;
 }
-/* line 321, ../../sass/main.scss */
+/* line 324, ../../sass/main.scss */
 .my-ControlArrow.next {
   background-position: top right;
   background-image: url(../assets/images/arrow-right.svg);
   right: 2%;
 }
 
-/* line 329, ../../sass/main.scss */
+/* line 332, ../../sass/main.scss */
 .fp-viewing-home .my-ControlArrow, body.mobile .my-ControlArrow {
   visibility: hidden;
   opacity: 0;
 }
 
-/* line 335, ../../sass/main.scss */
+/* line 338, ../../sass/main.scss */
 .fp-controlArrow.fp-prev {
   background-image: url(../assets/images/arrow-left.svg);
 }
 
-/* line 339, ../../sass/main.scss */
+/* line 342, ../../sass/main.scss */
 .fp-controlArrow.fp-next {
   background-image: url(../assets/images/arrow-right.svg);
 }
 
-/* line 347, ../../sass/main.scss */
+/* line 350, ../../sass/main.scss */
 body.mobile .section .slide {
   padding-top: 4em;
 }
-/* line 349, ../../sass/main.scss */
+/* line 352, ../../sass/main.scss */
 body.mobile .section .slide.section-heading {
   padding-top: 0;
 }
 
-/* line 355, ../../sass/main.scss */
+/* line 358, ../../sass/main.scss */
 .slide {
   background: #fff;
   background-size: cover;
 }
-/* line 358, ../../sass/main.scss */
+/* line 361, ../../sass/main.scss */
 .slide .col {
   vertical-align: middle;
 }
-/* line 361, ../../sass/main.scss */
+/* line 364, ../../sass/main.scss */
 .slide.section-heading {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* line 367, ../../sass/main.scss */
+/* line 370, ../../sass/main.scss */
 .section-heading {
   background-size: cover;
   color: #fff;
   font-size: 1.5em;
 }
-/* line 371, ../../sass/main.scss */
+/* line 374, ../../sass/main.scss */
 .section-heading .col.one-of-two {
   width: 50%;
   margin: 0;
@@ -1444,29 +1448,29 @@ body.mobile .section .slide.section-heading {
 .section-heading .col.one-of-two:first-child {
   margin-left: 0;
 }
-/* line 377, ../../sass/main.scss */
+/* line 380, ../../sass/main.scss */
 .section-heading p {
   font-size: 24px;
   font-weight: 100;
 }
 
-/* line 383, ../../sass/main.scss */
+/* line 386, ../../sass/main.scss */
 body.mobile .section-heading {
   padding-bottom: 64px;
   height: 100%;
 }
-/* line 386, ../../sass/main.scss */
+/* line 389, ../../sass/main.scss */
 body.mobile .section-heading .col.one-of-two {
   display: inline-block;
   height: auto;
 }
 
-/* line 392, ../../sass/main.scss */
+/* line 395, ../../sass/main.scss */
 .mobile .section-heading h1.col.one-of-two {
   margin-top: 64px;
 }
 
-/* line 396, ../../sass/main.scss */
+/* line 399, ../../sass/main.scss */
 .hint {
   position: absolute;
   top: 80%;
@@ -1481,91 +1485,91 @@ body.mobile .section-heading .col.one-of-two {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 409, ../../sass/main.scss */
+/* line 412, ../../sass/main.scss */
 .hint h3 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-/* line 415, ../../sass/main.scss */
+/* line 418, ../../sass/main.scss */
 body.mobile .hint {
   display: none;
 }
 
-/* line 420, ../../sass/main.scss */
+/* line 423, ../../sass/main.scss */
 .four-up .col {
   text-align: center;
   vertical-align: middle;
   height: 100%;
 }
-/* line 426, ../../sass/main.scss */
+/* line 429, ../../sass/main.scss */
 .four-up .col img {
   display: inline;
   width: 50%;
   max-height: 100%;
 }
 
-/* line 436, ../../sass/main.scss */
+/* line 439, ../../sass/main.scss */
 .col img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 441, ../../sass/main.scss */
+/* line 444, ../../sass/main.scss */
 body.mobile .col {
   padding-bottom: 32px;
 }
 
-/* line 446, ../../sass/main.scss */
+/* line 449, ../../sass/main.scss */
 body.slide-active #down-arrow {
   background-image: url(../assets/images/down-orange.png);
 }
-/* line 449, ../../sass/main.scss */
+/* line 452, ../../sass/main.scss */
 body.slide-active #page-header {
   border-color: #fff;
 }
 
-/* line 455, ../../sass/main.scss */
+/* line 458, ../../sass/main.scss */
 body.mobile #page-header {
   border-color: #888b8d;
 }
 
-/* line 461, ../../sass/main.scss */
+/* line 464, ../../sass/main.scss */
 body.fp-viewing-home #page-header {
   border-color: #fff;
 }
-/* line 463, ../../sass/main.scss */
+/* line 466, ../../sass/main.scss */
 body.fp-viewing-home #page-header .header-logo {
   background-image: url(../assets/images/ssnyc_nav-bar-logo-ko.svg);
 }
 
-/* line 470, ../../sass/main.scss */
+/* line 473, ../../sass/main.scss */
 body.mobile .section-heading {
   background-image: none !important;
   background: #e87722;
 }
 
-/* line 475, ../../sass/main.scss */
+/* line 478, ../../sass/main.scss */
 body.mobile .home.section-heading {
   background-image: url(../assets/images/strongstudio_home_photo.jpg) !important;
 }
 
-/* line 479, ../../sass/main.scss */
+/* line 482, ../../sass/main.scss */
 .home.section-heading {
   background-image: url(../assets/images/strongstudio_home_photo.jpg);
 }
 
-/* line 484, ../../sass/main.scss */
+/* line 487, ../../sass/main.scss */
 .logos .slide.section-heading {
   background-image: url(../assets/images/logos/strongstudio_logos_chapter-cover.jpg);
 }
 
-/* line 488, ../../sass/main.scss */
+/* line 491, ../../sass/main.scss */
 .print .slide.section-heading {
   background-image: url(../assets/images/print/strongstudio_print_chapter-cover.jpg);
 }
 
-/* line 492, ../../sass/main.scss */
+/* line 495, ../../sass/main.scss */
 .full-bleed {
   width: 100%;
   height: 100%;
@@ -1574,7 +1578,7 @@ body.mobile .home.section-heading {
   overflow: hidden;
 }
 
-/* line 500, ../../sass/main.scss */
+/* line 503, ../../sass/main.scss */
 .full-bleed img {
   width: auto;
   height: auto;
@@ -1583,7 +1587,7 @@ body.mobile .home.section-heading {
   display: none;
 }
 
-/* line 508, ../../sass/main.scss */
+/* line 511, ../../sass/main.scss */
 body.mobile .full-bleed img {
   width: 100%;
   height: auto;
@@ -1592,19 +1596,19 @@ body.mobile .full-bleed img {
   display: block;
 }
 
-/* line 516, ../../sass/main.scss */
+/* line 519, ../../sass/main.scss */
 .cs-title {
   display: inline-block;
   width: 100%;
 }
-/* line 519, ../../sass/main.scss */
+/* line 522, ../../sass/main.scss */
 .cs-title .cs {
   display: block;
   font-size: 2em;
   text-align: right;
   margin-bottom: .5em;
 }
-/* line 525, ../../sass/main.scss */
+/* line 528, ../../sass/main.scss */
 .cs-title h2 {
   font-family: Enclave-thin, serif;
   font-size: 4em;
@@ -1613,57 +1617,57 @@ body.mobile .full-bleed img {
   text-align: right;
 }
 
-/* line 536, ../../sass/main.scss */
+/* line 539, ../../sass/main.scss */
 body.mobile .cs-title .cs, body.mobile .cs-title h2 {
   text-align: left;
   line-height: 1em;
 }
 
-/* line 543, ../../sass/main.scss */
+/* line 546, ../../sass/main.scss */
 .icons-infographics h1, .dimensional h1 {
   font-size: 85px;
 }
 
-/* line 547, ../../sass/main.scss */
+/* line 550, ../../sass/main.scss */
 .careers h1 {
   font-size: 145px;
 }
 
-/* line 552, ../../sass/main.scss */
+/* line 555, ../../sass/main.scss */
 body.mobile .icons-infographics h1, body.mobile .dimensional h1 {
   font-size: 56px;
 }
 
-/* line 557, ../../sass/main.scss */
+/* line 560, ../../sass/main.scss */
 .case-study-logo {
   text-align: center;
   padding-bottom: 2em;
 }
-/* line 560, ../../sass/main.scss */
+/* line 563, ../../sass/main.scss */
 .case-study-logo img {
   max-height: 75px;
   width: auto;
 }
 
-/* line 567, ../../sass/main.scss */
+/* line 570, ../../sass/main.scss */
 body.mobile .case-study-logo {
   padding-top: 2em;
   width: 100px;
 }
-/* line 570, ../../sass/main.scss */
+/* line 573, ../../sass/main.scss */
 body.mobile .case-study-logo img {
   max-width: 100%;
 }
-/* line 574, ../../sass/main.scss */
+/* line 577, ../../sass/main.scss */
 body.mobile .cs {
   padding-top: 0px;
 }
 
-/* line 581, ../../sass/main.scss */
+/* line 584, ../../sass/main.scss */
 .case-study-slide .row .col {
   vertical-align: top;
 }
-/* line 584, ../../sass/main.scss */
+/* line 587, ../../sass/main.scss */
 .case-study-slide dt {
   width: 100%;
   border-bottom: 1px solid #f48029;
@@ -1671,117 +1675,149 @@ body.mobile .cs {
   text-transform: uppercase;
   color: #f48029;
 }
-/* line 590, ../../sass/main.scss */
+/* line 593, ../../sass/main.scss */
 .case-study-slide dt:after {
   content: ":";
 }
-/* line 594, ../../sass/main.scss */
+/* line 597, ../../sass/main.scss */
 .case-study-slide dd {
   margin: 1rem 0 1rem 0;
   color: #888b8d;
 }
-/* line 597, ../../sass/main.scss */
+/* line 600, ../../sass/main.scss */
 .case-study-slide dd:last-child {
   margin-bottom: 0;
 }
-/* line 600, ../../sass/main.scss */
+/* line 603, ../../sass/main.scss */
 .case-study-slide dd q {
   color: #f48029;
   font-family: Enclave-thin, serif;
   font-size: 1.5em;
 }
 
-/* line 609, ../../sass/main.scss */
+/* line 612, ../../sass/main.scss */
 .about .section-heading {
   background-image: url(../assets/images/ssnyc_about_chapter-cover.jpg);
 }
-/* line 612, ../../sass/main.scss */
+/* line 615, ../../sass/main.scss */
 .about .col {
   vertical-align: top;
 }
-/* line 616, ../../sass/main.scss */
-.about .staff header {
-  padding: 30px 0 30px 120px;
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: contain;
+/* line 620, ../../sass/main.scss */
+.about .staff .staff-image {
+  width: 20%;
+  margin: 0;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  display: inline-block;
+  box-sizing: border-box;
 }
-/* line 622, ../../sass/main.scss */
+/* line 34, ../../sass/_grid.scss */
+.about .staff .staff-image:first-child {
+  margin-left: 0;
+}
+/* line 623, ../../sass/main.scss */
+.about .staff .staff-image .headshot {
+  height: 200px;
+  width: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* line 631, ../../sass/main.scss */
+.about .staff .bio {
+  width: 80%;
+  margin: 0;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* line 34, ../../sass/_grid.scss */
+.about .staff .bio:first-child {
+  margin-left: 0;
+}
+/* line 635, ../../sass/main.scss */
+.about .staff header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f48029;
+}
+/* line 639, ../../sass/main.scss */
 .about .staff h3 {
   margin: 0;
   text-transform: uppercase;
 }
-/* line 626, ../../sass/main.scss */
+/* line 643, ../../sass/main.scss */
 .about .staff .title {
   color: #f48029;
 }
-/* line 629, ../../sass/main.scss */
-.about .staff.matthew header {
+/* line 647, ../../sass/main.scss */
+.about .staff.matthew .headshot {
   background-image: url(../assets/images/01_ssnyc_about_ms.png);
 }
-/* line 632, ../../sass/main.scss */
-.about .staff.linda header {
+/* line 651, ../../sass/main.scss */
+.about .staff.linda .headshot {
   background-image: url(../assets/images/02_ssnyc_about_ls.png);
 }
-/* line 635, ../../sass/main.scss */
-.about .staff.kate header {
+/* line 654, ../../sass/main.scss */
+.about .staff.kate .headshot {
   background-image: url(../assets/images/03_ssnyc_about_ka.png);
 }
-/* line 638, ../../sass/main.scss */
-.about .staff.alyssa header {
+/* line 657, ../../sass/main.scss */
+.about .staff.alyssa .headshot {
   background-image: url(../assets/images/05_ssnyc_about_ap.png);
 }
-/* line 641, ../../sass/main.scss */
-.about .staff.sam header {
+/* line 660, ../../sass/main.scss */
+.about .staff.sam .headshot {
+  width: 60%;
   background-image: url(../assets/images/04_ssnyc_about_sa.png);
 }
-/* line 644, ../../sass/main.scss */
-.about .staff.caitlyn header {
+/* line 664, ../../sass/main.scss */
+.about .staff.caitlyn .headshot {
   background-image: url(../assets/images/06_ssnyc_about_cb.png);
 }
 
-/* line 650, ../../sass/main.scss */
+/* line 670, ../../sass/main.scss */
 .clients {
   background-image: url(../assets/images/ssnyc_clients_cover.jpg);
   background-size: cover;
   background-position: bottom left;
 }
-/* line 654, ../../sass/main.scss */
+/* line 674, ../../sass/main.scss */
 .clients h2 {
   font-size: 3rem;
   margin-bottom: .5em;
   font-family: Enclave-thin, serif;
   line-height: 1em;
 }
-/* line 660, ../../sass/main.scss */
+/* line 680, ../../sass/main.scss */
 .clients .section-heading {
   background-position: bottom left;
 }
-/* line 663, ../../sass/main.scss */
+/* line 683, ../../sass/main.scss */
 .clients .col {
   vertical-align: top;
   font-size: 1.25rem;
   line-height: 1.5em;
 }
 
-/* line 671, ../../sass/main.scss */
+/* line 691, ../../sass/main.scss */
 body.mobile .clients h2 {
   padding-top: 2em;
 }
 
-/* line 677, ../../sass/main.scss */
+/* line 697, ../../sass/main.scss */
 .contact {
   background: #ccc;
 }
-/* line 679, ../../sass/main.scss */
+/* line 699, ../../sass/main.scss */
 .contact .section-heading {
   color: #888b8d;
 }
-/* line 682, ../../sass/main.scss */
+/* line 702, ../../sass/main.scss */
 .contact .contact-map {
   width: 100%;
 }
-/* line 685, ../../sass/main.scss */
+/* line 705, ../../sass/main.scss */
 .contact .contact-logo {
   display: block;
   width: 90%;
@@ -1790,15 +1826,15 @@ body.mobile .clients h2 {
   margin-bottom: 2em;
 }
 
-/* line 696, ../../sass/main.scss */
+/* line 716, ../../sass/main.scss */
 .careers .section-heading {
   background-image: url(../assets/images/ssnyc_careers_chapter-cover.jpg);
 }
-/* line 699, ../../sass/main.scss */
+/* line 719, ../../sass/main.scss */
 .careers .col {
   vertical-align: top;
 }
-/* line 704, ../../sass/main.scss */
+/* line 724, ../../sass/main.scss */
 .careers .job-description h3 {
   font-size: 1em;
   color: #f48029;
@@ -1806,28 +1842,28 @@ body.mobile .clients h2 {
   border-bottom: 1px solid #f48029;
   padding-bottom: .5em;
 }
-/* line 711, ../../sass/main.scss */
+/* line 731, ../../sass/main.scss */
 .careers .job-description h4 {
   padding: 0;
   margin: 0 0 .5em 0;
   text-transform: uppercase;
 }
-/* line 716, ../../sass/main.scss */
+/* line 736, ../../sass/main.scss */
 .careers .job-description ul {
   padding: 1em;
 }
-/* line 719, ../../sass/main.scss */
+/* line 739, ../../sass/main.scss */
 .careers .job-description p {
   color: #f48029;
   font-size: .875em;
 }
-/* line 723, ../../sass/main.scss */
+/* line 743, ../../sass/main.scss */
 .careers .job-description li {
   font-size: .875em;
   line-height: 1.25em;
 }
 
-/* line 730, ../../sass/main.scss */
+/* line 750, ../../sass/main.scss */
 .back-to-top {
   font-size: 2rem;
   position: absolute;
@@ -1835,28 +1871,28 @@ body.mobile .clients h2 {
   left: 50%;
   transform: translateX(-50%);
 }
-/* line 736, ../../sass/main.scss */
+/* line 756, ../../sass/main.scss */
 .back-to-top img {
   width: 47px;
   height: 47px;
 }
 
-/* line 743, ../../sass/main.scss */
+/* line 763, ../../sass/main.scss */
 .fp-viewing-contact #down-arrow {
   display: none;
 }
 
-/* line 746, ../../sass/main.scss */
+/* line 766, ../../sass/main.scss */
 body.mobile .back-to-top {
   display: none;
 }
 
-/* line 750, ../../sass/main.scss */
+/* line 770, ../../sass/main.scss */
 body.mobile .hide-mobile {
   display: none;
 }
 
-/* line 754, ../../sass/main.scss */
+/* line 774, ../../sass/main.scss */
 .copyright {
   font-size: .75em;
   line-height: 1em;

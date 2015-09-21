@@ -238,6 +238,9 @@ body.mobile .locationTracker{
       &.pinterest{
         background-image: url(../assets/images/icons/strongstudio_social-media_pinterest.svg);
       }
+      &.behance{
+        background-image: url(../assets/images/icons/strongstudio_social-media_behance.svg);
+      }
     }
   }
 }
@@ -613,11 +616,25 @@ body.mobile{
     vertical-align: top;
   }
   .staff{
+
+    .staff-image{
+      @include column(1, 5);
+
+      .headshot{
+        height: 200px;
+        width: 80%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .bio{
+      @include column(4, 5);
+    }
+
     header{
-      padding: 30px 0 30px 120px;
-      background-position: center left;
-      background-repeat: no-repeat;
-      background-size: contain;
+      padding: 1rem 0;
+      border-bottom: 1px solid $orange;
     }
     h3{
       margin: 0;
@@ -626,22 +643,25 @@ body.mobile{
     .title{
       color: $orange;
     }
-    &.matthew header{
+
+    &.matthew .headshot{
       background-image: url(../assets/images/01_ssnyc_about_ms.png);
     }
-    &.linda header{
+
+    &.linda .headshot{
       background-image: url(../assets/images/02_ssnyc_about_ls.png);
     }
-    &.kate header{
+    &.kate .headshot{
       background-image: url(../assets/images/03_ssnyc_about_ka.png);
     }
-    &.alyssa header{
+    &.alyssa .headshot{
       background-image: url(../assets/images/05_ssnyc_about_ap.png)
     }
-    &.sam header{
+    &.sam .headshot{
+      width: 60%;
       background-image: url(../assets/images/04_ssnyc_about_sa.png);
     }
-    &.caitlyn header{
+    &.caitlyn .headshot{
       background-image: url(../assets/images/06_ssnyc_about_cb.png);
     }
   }
