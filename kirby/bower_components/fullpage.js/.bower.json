@@ -1,6 +1,5 @@
 {
   "name": "fullpage.js",
-  "version": "2.6.6",
   "homepage": "http://alvarotrigo.com/fullPage/",
   "authors": [
     "Alvaro Trigo https://github.com/alvarotrigo"
@@ -32,11 +31,12 @@
   "dependencies": {
     "jquery": ">=1.6.0"
   },
-  "_release": "2.6.6",
+  "version": "2.6.9",
+  "_release": "2.6.9",
   "_resolution": {
     "type": "version",
-    "tag": "2.6.6",
-    "commit": "9b00dbaf658dee06d59f6bf7c55d74b26cd5a747"
+    "tag": "2.6.9",
+    "commit": "a3e4c5bac87ef6d0fd8afa3f64be9883228fd17c"
   },
   "_source": "git://github.com/alvarotrigo/fullPage.js.git",
   "_target": "~2.6.4",

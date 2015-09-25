@@ -2,24 +2,33 @@
 
 ![preview](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png)
 ![compatibility](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif)
-![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.6.6-brightgreen.svg)
+![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.6.9-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 7Kb gziped!
 
 A simple and easy to use plugin to create fullscreen scrolling websites (also known as single page websites or onepage sites).
 It allows the creation of fullscreen scrolling websites, as well as adding some landscape sliders inside the sections of the site.
 
-- [Live demo](http://alvarotrigo.com/fullPage/)
-- [Apple demo](http://alvarotrigo.com/fullPage/examples/apple.html)
+- [Live demo](http://alvarotrigo.com/fullPage/) - [Apple demo](http://alvarotrigo.com/fullPage/examples/apple.html)
 - [Blog Article](http://alvarotrigo.com/blog/fullpage-jquery-plugin-for-fullscreen-scrolling-websites/)
 - [Frequently Answered Questions](https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions)
 
 Invite me to a coffee
 [![Donate](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BEK5JQCQMED4J&lc=GB&item_name=fullPage%2ejs&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
-Customizations of the plugin available upon request for some reasonable price. <a href="http://alvarotrigo.com/#contact-page">Contact me</a>.
+Customizations of the plugin and urgent changes are available upon request for some reasonable price. <a href="http://alvarotrigo.com/#contact-page">Contact me</a>.
 
 Would you like to have a website using fullpage.js functionality but you don't know how to use it? I can do it for you for a reasonable price. <a href="http://alvarotrigo.com/#contact-page">Contact me</a>.
+
+- [Introduction](https://github.com/alvarotrigo/fullPage.js#introduction)
+- [Compatibility](https://github.com/alvarotrigo/fullPage.js#compatibility)
+- [Usage](https://github.com/alvarotrigo/fullPage.js#usage)
+- [Options](https://github.com/alvarotrigo/fullPage.js#options)
+- [Methods](https://github.com/alvarotrigo/fullPage.js#methods)
+- [Lazy loading](https://github.com/alvarotrigo/fullPage.js#lazy-loading)
+- [Callbacks](https://github.com/alvarotrigo/fullPage.js#callbacks)
+- [Resources](https://github.com/alvarotrigo/fullPage.js#resources)
+- [Who is using fullpage.js](https://github.com/alvarotrigo/fullPage.js#who-is-using-fullpagejs)
 
 ## Introduction
 Suggestion are more than welcome, not only for feature requests but also for coding style improvements.
@@ -73,6 +82,8 @@ https://cdnjs.com/libraries/fullPage.js
 ###Required HTML structure
 Each section will be defined with an element containing the `section` class.
 The active section by default will be the first section, which is taken as the home page.
+
+Sections should be placed inside a wrapper (`<div id="fullpage">` in this case). The wrapper can not be the `body` element.
 ```html
 <div id="fullpage">
 	<div class="section">Some section</div>
@@ -127,6 +138,7 @@ $(document).ready(function() {
 		scrollingSpeed: 700,
 		autoScrolling: true,
 		fitToSection: true,
+		fitToSectionDelay: 1000,
 		scrollBar: false,
 		easing: 'easeInOutCubic',
 		easingcss3: 'ease',
@@ -152,7 +164,8 @@ $(document).ready(function() {
 		paddingTop: '3em',
 		paddingBottom: '10px',
 		fixedElements: '#header, .footer',
-		responsive: 0,
+		responsiveWidth: 0,
+		responsiveHeight: 0,
 
 		//Custom selectors
 		sectionSelector: '.section',
@@ -164,13 +177,13 @@ $(document).ready(function() {
 		afterRender: function(){},
 		afterResize: function(){},
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
 });
 ```
 
 ### Creating links to sections or slides
-If you are using fullPage.js with anchor links for the sections (using the `anchors` option), then you will be able to use anchor links also to navigate directly to a certain slide inside a section.
+If you are using fullPage.js with anchor links for the sections (using the `anchors` option or the attribute `data-anchor` in each section), then you will be able to use anchor links also to navigate directly to a certain slide inside a section.
 
 This would be an example of a link with an anchor: http://alvarotrigo.com/fullPage/#secondPage/2 (which is the URL you will see once you access to that section/slide manually)
 Notice the last part of the URL ends in `#secondPage/2`.
@@ -190,15 +203,28 @@ We could have used a custom anchor for the slide instead of its index if we woul
 
 ```html
 <div class="section">
-    <div class="slide" data-anchor="slide1"> Slide 1 </div>
-    <div class="slide" data-anchor="slide2"> Slide 2 </div>
-    <div class="slide" data-anchor="slide3"> Slide 3 </div>
-    <div class="slide" data-anchor="slide4"> Slide 4 </div>
+	<div class="slide" data-anchor="slide1"> Slide 1 </div>
+	<div class="slide" data-anchor="slide2"> Slide 2 </div>
+	<div class="slide" data-anchor="slide3"> Slide 3 </div>
+	<div class="slide" data-anchor="slide4"> Slide 4 </div>
 </div>
 ```
 In this last case, the URL we would use would be `#secondPage/slide3`, which is the equivalent to our previous `#secondPage/2`.
 
+Note that section anchors can also be defined in the same way, by using the `data-anchor` attribute, if no `anchors` array is provided.
+
 **Be careful!** `data-anchor` tags can not have the same value as any ID element on the site (or NAME element for IE).
+
+### Creating smaller sections
+It is possible to use sections or slides which don't take the whole viewport height resulting in smaller sections. This is ideal for footers.
+It is important to realise that it doesn't make sense to have all of your sections using this feature. If there is more than one section in the initial load of the site, the plugin won't scroll at all to see the next one as it will be already in the viewport.
+
+To create smaller sections just use the class `fp-auto-height` in the section you want to apply it. It will then take the height defined by your section/slide content.
+
+```html
+<div class="section">Whole viewport</div>
+<div class="section fp-auto-height">Auto height</div>
+```
 
 ## Options
 
@@ -214,11 +240,12 @@ In this last case, the URL we would use would be `#secondPage/slide3`, which is 
 Example:
 ```javascript
 $('#fullpage').fullpage({
-    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+	sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
 });
 ```
 
-- `anchors`: (default `[]`) Defines the anchor links (#example) to be shown on the URL for each section. The position of the anchors in the array will define to which sections the anchor is applied. (second position for second section and so on). Using anchors forward and backward navigation will also be possible through the browser. This option also allows users to bookmark a specific section or slide. **Be careful!** if you use anchors, they can not have the same value as any ID element on the site (or NAME element for IE).
+- `anchors`: (default `[]`) Defines the anchor links (#example) to be shown on the URL for each section. Anchors value should be unique. The position of the anchors in the array will define to which sections the anchor is applied. (second position for second section and so on). Using anchors forward and backward navigation will also be possible through the browser. This option also allows users to bookmark a specific section or slide. **Be careful!** anchors can not have the same value as any ID element on the site (or NAME element for IE).
+Now anchors can be defined directly in the HTML structure by using the attribute `data-anchor` as explained here.
 
 - `lockAnchors`: (default `false`). Determines whether anchors in the URL will have any effect at all in the plugin. You can still using anchors internally for your own functions and callbacks, but they won't have any effect in the scrolling of the site. Useful if you want to combine fullPage.js with other plugins using anchor in the URL.
 
@@ -240,6 +267,9 @@ It requires the file `vendors/jquery.easings.min.js` or [jQuery UI](http://jquer
 - `autoScrolling`: (default `true`) Defines whether to use the "automatic" scrolling or the "normal" one. It also has affects the way the sections fit in the browser/device window in tablets and mobile phones.
 
 - `fitToSection`: (default `true`). Determines whether or not to fit sections to the viewport or not. When set to `true` the current active section will always fill the whole viewport. Otherwise the user will be free to stop in the middle of a section (when )
+
+- `fitToSectionDelay`: (default 1000). If `fitToSection` is set to true, this delays
+the fitting by the configured milliseconds.
 
 - `scrollBar`: (default `false`). Determines whether to use scrollbar for the site or not. In case of using scroll bar, the `autoScrolling` functionality will still working as expected. The user will also be free to scroll the site with the scroll bar and fullPage.js will fit the section in the screen when scrolling finishes.
 
@@ -268,16 +298,16 @@ This won't generate a menu but will just add the `active` class to the element i
 In order to link the elements of the menu with the sections, an HTML 5 data-tag (`data-menuanchor`) will be needed to use with the same anchor links as used within the sections. Example:
 ```html
 <ul id="myMenu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-    <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-    <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+	<li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+	<li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
 </ul>
 ```
 ```javascript
 $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-    menu: '#myMenu'
+	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	menu: '#myMenu'
 });
 ```
 
@@ -307,25 +337,27 @@ In case of setting it to `true`, it requires the vendor plugin [`jquery.slimscro
 
 - `slideSelector`: (default `.slide`)  Defines the jQuery selector used for the plugin slides.  It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js.
 
-- `responsive`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
+- `responsiveWidth`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
+
+- `responsiveHeight`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined height in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.
 
 ## Methods
 You can see them in action [here](http://alvarotrigo.com/fullPage/examples/methods.html)
 
 ### moveSectionUp()
-Scrolls one section up:
+[Demo](http://codepen.io/alvarotrigo/pen/GJXNMN) Scrolls one section up:
 ```javascript
 $.fn.fullpage.moveSectionUp();
 ```
 ---
 ### moveSectionDown()
-Scrolls one section down:
+[Demo](http://codepen.io/alvarotrigo/pen/jPvVZx) Scrolls one section down:
 ```javascript
 $.fn.fullpage.moveSectionDown();
 ```
 ---
 ### moveTo(section, slide)
-Scrolls the page to the given section and slide. The first slide, the visible one by default, will have index 0.
+[Demo](http://codepen.io/alvarotrigo/pen/doqOmY) Scrolls the page to the given section and slide. The first slide, the visible one by default, will have index 0.
 ```javascript
 /*Scrolling to the section with the anchor link `firstSlide` and to the 2nd Slide */
 $.fn.fullpage.moveTo('firstSlide', 2);
@@ -341,6 +373,7 @@ $.fn.fullpage.moveTo(3);
 ```
 ---
 ### silentMoveTo(section, slide)
+[Demo](http://codepen.io/alvarotrigo/pen/doqOeY)
 Exactly the same as [`moveTo`](https://github.com/alvarotrigo/fullPage.js#movetosection-slide) but in this case it performs the scroll without animation. A direct jump to the destination.
 ```javascript
 /*Scrolling to the section with the anchor link `firstSlide` and to the 2nd Slide */
@@ -348,19 +381,21 @@ $.fn.fullpage.silentMoveTo('firstSlide', 2);
 ```
 ---
 ### moveSlideRight()
+[Demo](http://codepen.io/alvarotrigo/pen/Wvgoyz)
 Scrolls the horizontal slider of the current section to the next slide:
 ```javascript
 $.fn.fullpage.moveSlideRight();
 ```
 ---
 ### moveSlideLeft()
+[Demo](http://codepen.io/alvarotrigo/pen/gpdLjW)
 Scrolls the horizontal slider of the current section to the previous slide:
 ```javascript
 $.fn.fullpage.moveSlideLeft();
 ```
 ---
 ### setAutoScrolling(boolean)
-Sets the scrolling configuration in real time.
+[Demo](http://codepen.io/alvarotrigo/pen/rVZWrR) Sets the scrolling configuration in real time.
 Defines the way the page scrolling behaves. If it is set to `true`, it will use the "automatic" scrolling, otherwise, it will use the "manual" or "normal" scrolling of the site. Be careful when combining this option with `scrollOverflow` set to true, as it might be difficult to scroll using the mouse wheel or the trackpad when the section is scrollable.
 
 ```javascript
@@ -368,6 +403,7 @@ $.fn.fullpage.setAutoScrolling(false);
 ```
 ---
 ### setFitToSection(boolean)
+[Demo](http://codepen.io/alvarotrigo/pen/GJXNYm)
 Sets the value for the option `fitToSection` determining whether to fit the section in the screen or not.
 
 ```javascript
@@ -375,6 +411,7 @@ $.fn.fullpage.setFitToSection(false);
 ```
 ---
 ### setLockAnchors(boolean)
+[Demo](http://codepen.io/alvarotrigo/pen/yNxVRQ)
 Sets the value for the option `lockAnchors` determining whether anchors will have any effect in the URL or not.
 
 ```javascript
@@ -382,7 +419,7 @@ $.fn.fullpage.setLockAnchors(false);
 ```
 ---
 ### setAllowScrolling(boolean, [directions])
-Adds or remove the possibility of scrolling through sections by using the mouse wheel/trackpad or touch gestures (which is active by default). Note this won't disable the keyboard scrolling. You
+[Demo](http://codepen.io/alvarotrigo/pen/EjeNdq) Adds or remove the possibility of scrolling through sections by using the mouse wheel/trackpad or touch gestures (which is active by default). Note this won't disable the keyboard scrolling. You
 would need to use `setKeyboardScrolling` for it.
 
 - `directions`: (optional parameter) Admitted values: `all`, `up`, `down`, `left`, `right` or a combination of them separated by commas like `down, right`. It defines the direction for which the scrolling will be enabled or disabled.
@@ -400,7 +437,7 @@ $.fn.fullpage.setAllowScrolling(false, 'down, right');
 ```
 ---
 ### setKeyboardScrolling(boolean, [directions])
-Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys (which is active by default).
+[Demo](http://codepen.io/alvarotrigo/pen/GJXNwm) Adds or remove the possibility of scrolling through sections by using the keyboard arrow keys (which is active by default).
 
 - `directions`: (optional parameter) Admitted values: `all`, `up`, `down`, `left`, `right` or a combination of them separated by commas like `down, right`. It defines the direction for which the scrolling will be enabled or disabled.
 
@@ -416,21 +453,21 @@ $.fn.fullpage.setKeyboardScrolling(false, 'down, right');
 ```
 ---
 ### setRecordHistory(boolean)
-Defines whether to record the history for each hash change in the URL.
+[Demo](http://codepen.io/alvarotrigo/pen/rVZWQb) Defines whether to record the history for each hash change in the URL.
 
 ```javascript
 $.fn.fullpage.setRecordHistory(false);
 ```
 ---
 ### setScrollingSpeed(milliseconds)
-Defines the scrolling speed in milliseconds.
+[Demo](http://codepen.io/alvarotrigo/pen/NqLbeY) Defines the scrolling speed in milliseconds.
 
 ```javascript
 $.fn.fullpage.setScrollingSpeed(700);
 ```
 ---
 ### destroy(type)
-Destroys the plugin events and optionally its HTML markup and styles.
+[Demo](http://codepen.io/alvarotrigo/pen/bdxBzv) Destroys the plugin events and optionally its HTML markup and styles.
 Ideal to use when using AJAX to load content. ()
 
 - `type`: can be empty or `all`. If `all` is passed, the HTML markup and styles used by fullpage.js will be removed. This way the original HTML markup, the one used before any plugin modification is made, will be maintained.
@@ -452,7 +489,7 @@ $.fn.fullpage.reBuild();
 ```
 
 ##Lazy Loading
-fullPage.js provides a way to lazy load images, videos and audio elements so they won't slow down the loading of your site or unnecessarily waste data transfer.
+[Demo](http://codepen.io/alvarotrigo/pen/eNLBXo) fullPage.js provides a way to lazy load images, videos and audio elements so they won't slow down the loading of your site or unnecessarily waste data transfer.
 When using lazy loading, all these elements will only get loaded when entering in the viewport.
 To enable lazy loading all you need to do is change your `src` attribute to `data-src` as shown below:
 
@@ -460,12 +497,12 @@ To enable lazy loading all you need to do is change your `src` attribute to `dat
 <img data-src="image.png">
 <video>
 	<source data-src="video.webm" type="video/webm" />
-    <source data-src="video.mp4" type="video/mp4" />
+	<source data-src="video.mp4" type="video/mp4" />
 </video>
  ```
 
 ## Callbacks
-You can see them in action [here](http://alvarotrigo.com/fullPage/examples/callbacks.html).
+[Demo](http://codepen.io/alvarotrigo/pen/XbPNQv) You can see them in action [here](http://alvarotrigo.com/fullPage/examples/callbacks.html).
 
 ###afterLoad (`anchorLink`, `index`)
 Callback fired once the sections have been loaded, after the scrolling has ended.
@@ -500,6 +537,7 @@ Example:
 ---
 ###onLeave (`index`, `nextIndex`, `direction`)
 This callback is fired once the user leaves a section, in the transition to the new section.
+Returning `false` will cancel the move before it takes place.
 
 Parameters:
 
@@ -604,22 +642,24 @@ Example:
 
 
 ---
-###onSlideLeave (`anchorLink`, `index`, `slideIndex`, `direction`, `nextindex`)
+###onSlideLeave (`anchorLink`, `index`, `slideIndex`, `direction`, `nextSlideIndex`)
 This callback is fired once the user leaves an slide to go to another, in the transition to the new slide.
+Returning `false` will cancel the move before it takes place.
+
 Parameters:
 
 - `anchorLink`: anchorLink corresponding to the section.
 - `index`: index of the section. Starting from 1.
 - `slideIndex`: index of the slide. **Starting from 0.**
 - `direction`: takes the values `right` or `left` depending on the scrolling direction.
-- `nextIndex`: index of the destination slide. **Starting from 0.**
+- `nextSlideIndex`: index of the destination slide. **Starting from 0.**
 
 
 Example:
 
 ```javascript
 	$('#fullpage').fullpage({
-		onSlideLeave: function( anchorLink, index, slideIndex, direction, nextIndex){
+		onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
 			var leavingSlide = $(this);
 
 			//leaving the first slide of the 2nd Section to the right
@@ -663,6 +703,7 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
 - http://www.battlefield.com/
 - http://www.kibey.com/
 - http://www.newjumoconcept.com/
+- http://medoff.ua/en/
 - http://promo.prestigio.com/grace1/
 - http://www.mi.com/shouhuan
 - https://moneytree.jp/
@@ -678,6 +719,7 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
 - http://collection.madeofsundays.com
 - http://thiswasmybest.com/
 - http://jacoberiksson.se/
+- http://www.boxreload.com/
 - https://cloudmagic.com/
 - http://www.dividendsolar.com/
 - http://www.thespecialists.be

@@ -286,6 +286,12 @@ body.mobile #down-arrow{
   100% {transform:translate(-50%, 0%)}
 }
 
+@-webkit-keyframes bounce{
+  0% {-webkit-transform:translate(-50%, 0%)}
+  50% {-webkit-transform:translate(-50%, -50%)}
+  100% {-webkit-transform:translate(-50%, 0%)}
+}
+
 body.fp-viewing-home {
   #down-arrow {
     background-image: url(../assets/images/arrow-down-white.svg);
@@ -293,6 +299,7 @@ body.fp-viewing-home {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    -webkit-animation: bounce 1.5s infinite ease-in-out;
   }
 }
 
@@ -614,6 +621,9 @@ body.mobile{
   }
   .col{
     vertical-align: top;
+    &.one-of-two{
+      @include column(1,2, 8%);
+    }
   }
   .staff{
 
@@ -655,7 +665,8 @@ body.mobile{
       background-image: url(../assets/images/03_ssnyc_about_ka.png);
     }
     &.alyssa .headshot{
-      background-image: url(../assets/images/05_ssnyc_about_ap.png)
+      background-image: url(../assets/images/05_ssnyc_about_ap.png);
+      width: 80%;
     }
     &.sam .headshot{
       width: 60%;
@@ -663,6 +674,7 @@ body.mobile{
     }
     &.caitlyn .headshot{
       background-image: url(../assets/images/06_ssnyc_about_cb.png);
+      width: 75%;
     }
   }
 }
