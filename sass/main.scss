@@ -680,16 +680,26 @@ body.mobile{
 }
 
 .clients{
-  background-image: url(../assets/images/ssnyc_clients_cover.jpg);
-  background-size: cover;
-  background-position: bottom left;
+
   h2{
     font-size: 3rem;
     margin-bottom: .5em;
     font-family: Enclave-thin, serif;
     line-height: 1em;
   }
+
+  h3{
+    border-bottom: 1px solid $orange;
+    font-family: Apercu-bold, sans-serif;
+    text-transform: uppercase;
+    color: $orange;
+    font-size: 1em;
+  }
+
   .section-heading{
+    background-image: url(../assets/images/ssnyc_clients_cover.jpg);
+    background-size: cover;
+    background-position: bottom left;
     background-position: bottom left;
   }
   .col{
@@ -707,16 +717,18 @@ body.mobile .clients{
 
 
 .contact{
-  background: #ccc;
+  background: #dad8d6;
   .section-heading{
     color: $grey;
   }
   .contact-map{
     width: 100%;
+    height: auto;
+    max-height: none;
   }
   .contact-logo{
     display: block;
-    width: 90%;
+    width: 40%;
     max-width: 400px;
     min-width: 150px;
     margin-bottom: 2em;
@@ -784,6 +796,9 @@ body.mobile .hide-mobile{
 }
 
 .copyright{
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
   font-size: .75em;
   line-height: 1em;
 }

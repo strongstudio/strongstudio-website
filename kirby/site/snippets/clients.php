@@ -1,7 +1,17 @@
 <a class="anchorLink" name="clients"></a>
 <div class="section clients" data-title="Clients">
-    <div class="section-heading">
-        <h2 class="wrapper">We work with great companies</h2>
+    <div class="slide section-heading">
+        <div class="wrapper row med-single-col">
+            <div class="col one-of-two">
+                <h1>Clients</h1>
+            </div>
+            <div class="col one-of-two border-left">
+                <p class="tagline">Our clients are our best advertisement. From national brands to start-ups, we possess the experience, passion, and talent to provide smart solutions for any business, big or small.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <h2 class="wrapper">We work with great companies.</h2>
         <div class="wrapper row med-single-col">
             
             <div class="col one-of-four">
@@ -55,5 +65,47 @@
         </div>
     </div>
     
+    <div class="slide">
+        <div class="wrapper row">
+            <div class="col one-of-two">
+                <h3>What we do:</h3>
+                <div class="row">
+                    <div class="col one-of-two">
+                        Branding + Identity<br> 
+                        Editorial + Publication<br> 
+                        Environmental + Signage Front End Development<br>
+                        Illustration<br>
+                        Infographics + Icons<br>
+                    </div>
+                    <div class="col one-of-two">
+                        Native Advertising<br> 
+                        Packaging Presentations<br> 
+                        Print<br>
+                        Product Development<br> 
+                        Web + Digital (UI / UX)
+                    </div>
+                </div>
+            </div>
+            <div class="col one-of-two">
+                <h3>Industries:</h3>
+                <div class="row">
+                    <div class="col one-of-two">
+                        Business to Business Commerce<br>
+                        Editorial + Publication Education<br>
+                        Fashion<br> 
+                        Finance
+                    </div>
+                    <div class="col one-of-two">
+                        Food + Hospitality<br> 
+                        Home Decor <br>
+                        Nonprofit<br>
+                        Real Estate<br>
+                        Sports + Entertainment<br> 
+                        Technology + Start Ups
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </div>
