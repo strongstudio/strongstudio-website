@@ -4,7 +4,7 @@
         <title>Strong Studio NYC LLC</title>
         <meta name="description" content="Strong Studio NYC LLC is a conceptually driven design studio in SoHo creating identities, print, advertising, packaging, environmental, web and motion design.">
         <meta name="keywords" content="Strong Studio Graphic Design Web">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=false">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         
         <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
         <link rel="stylesheet" href="stylesheets/main.css">

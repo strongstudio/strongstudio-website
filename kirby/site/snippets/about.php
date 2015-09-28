@@ -1,6 +1,7 @@
 <a class="anchorLink" name="about"></a>
 
 <div class="section about" data-title="About">
+    
     <div class="slide section-heading">
         <div class="wrapper row med-single-col">
             <div class="col one-of-two">
@@ -12,7 +13,7 @@
         </div>
     </div>
     
-    <div class="slide">
+    <div class="slide align-top">
         <div class="wrapper">
             <div class="row med-single-col">
                 <div class="col one-of-two">
@@ -53,7 +54,7 @@
         </div>
     </div>
     
-    <div class="slide">
+    <div class="slide align-top">
         <div class="wrapper">
             <div class="row med-single-col">
                 <div class="col one-of-two">

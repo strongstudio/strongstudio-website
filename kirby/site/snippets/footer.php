@@ -1,5 +1,6 @@
         </div>
     </body>
+    
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
@@ -192,7 +193,7 @@
             function mobileWaypoints(){
                 $body.addClass('fp-viewing-home');
                 $afterHome.waypoint(function(direction){
-                    console.log('waypoint');
+                    //console.log('waypoint');
                     if(direction === 'down'){
                         $body.removeClass('fp-viewing-home');
                     }
@@ -204,7 +205,7 @@
             
             function sizeSectionHeadings(){
                 $sectionHeadings.each(function(){
-                    console.log(window.getComputedStyle(this).getPropertyValue('height'));
+                    //console.log(window.getComputedStyle(this).getPropertyValue('height'));
                     if(window.innerHeight > window.getComputedStyle(this).getPropertyValue('height').replace(/\D/g,'')){
                         this.style.height = window.innerHeight + 'px';
                     }

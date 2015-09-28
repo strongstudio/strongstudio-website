@@ -355,7 +355,7 @@ body.fp-viewing-home {
 body.mobile .section{
   //padding-bottom: 4em;
   .slide{
-    padding-top: 4em;
+    padding-top: 2em;
     &.section-heading{
       padding-top: 0;
     }
@@ -619,12 +619,16 @@ body.mobile{
   .section-heading{
     background-image: url(../assets/images/ssnyc_about_chapter-cover.jpg);
   }
-  .col{
-    vertical-align: top;
-    &.one-of-two{
-      @include column(1,2, 8%);
+
+  .align-top{
+    .col {
+      vertical-align: top;
+      &.one-of-two {
+        @include column(1, 2, 8%);
+      }
     }
   }
+
   .staff{
 
     .staff-image{
@@ -679,6 +683,11 @@ body.mobile{
   }
 }
 
+//body.mobile .about .headshot{
+//  width: 25% !important;
+//  height: 80px !important;
+//}
+
 .clients{
 
   h2{
@@ -717,7 +726,7 @@ body.mobile .clients{
 
 
 .contact{
-  background: #dad8d6;
+  background: #dad8d6 !important;
   .section-heading{
     color: $grey;
   }
@@ -733,6 +742,23 @@ body.mobile .clients{
     min-width: 150px;
     margin-bottom: 2em;
   }
+}
+
+.copyright{
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  font-size: .75em;
+  line-height: 1em;
+}
+
+.mobile .copyright{
+  position: static;
+  padding-left: 1em;
+}
+
+.mobile .contact .section-heading{
+  background: #dad8d6;
 }
 
 
@@ -795,10 +821,3 @@ body.mobile .hide-mobile{
   display: none;
 }
 
-.copyright{
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  font-size: .75em;
-  line-height: 1em;
-}

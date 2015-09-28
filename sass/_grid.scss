@@ -112,7 +112,7 @@
   /* another approach on a per-row basis */
   &.sm-single-col{
     @media only screen and (max-width: $phone-width){
-      .col{
+      >.col{
         width: 100% !important;
         margin-left: 0 !important;
       }
@@ -121,7 +121,7 @@
 
   &.med-single-col{
     @media only screen and (max-width: $tablet-width){
-      .col{
+      >.col{
         width: 100% !important;
         padding-left: 0 !important;
       }
@@ -130,7 +130,7 @@
 
   &.lg-single-col{
     @media only screen and (max-width: $desktop-width){
-      .col{
+      >.col{
         width: 100% !important;
         padding-left: 0 !important;
       }

@@ -66,10 +66,10 @@
     </div>
     
     <div class="slide">
-        <div class="wrapper row">
+        <div class="wrapper row med-single-col">
             <div class="col one-of-two">
                 <h3>What we do:</h3>
-                <div class="row">
+                <div class="row med-single-col">
                     <div class="col one-of-two">
                         Branding + Identity<br> 
                         Editorial + Publication<br> 
@@ -88,7 +88,7 @@
             </div>
             <div class="col one-of-two">
                 <h3>Industries:</h3>
-                <div class="row">
+                <div class="row med-single-col">
                     <div class="col one-of-two">
                         Business to Business Commerce<br>
                         Editorial + Publication Education<br>
