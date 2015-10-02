@@ -3,7 +3,7 @@
     <div class="section-heading">
         <div class="wrapper row med-single-col">
             <div class="col one-of-two">
-                <img class="contact-map" src="assets/images/ssnyc_contact_map.png"></a>
+                <img class="contact-map" src="assets/images/strongstudio_contact_map.jpg"></a>
             </div>
             <div class="col one-of-two">
                 <img class="contact-logo" src="assets/images/ssnyc_contact-logo.png">
