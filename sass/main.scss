@@ -752,6 +752,21 @@ body.mobile .clients{
   line-height: 1em;
 }
 
+.mobile .contact{
+  text-align: center;
+  img{
+    margin: 0 auto;
+    &.contact-map{
+      margin-top: 1em;
+      -webkit-transform: translateX(7%);
+      -moz-transform: translateX(7%);
+      -ms-transform: translateX(7%);
+      -o-transform: translateX(7%);
+      transform: translateX(7%);
+    }
+  }
+}
+
 .mobile .copyright{
   position: static;
   padding-left: 1em;
@@ -814,7 +829,8 @@ body.mobile .clients{
 }
 
 body.mobile .back-to-top{
-  display: none;
+  display: block;
+  position: static;
 }
 
 body.mobile .hide-mobile{

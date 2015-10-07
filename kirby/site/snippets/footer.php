@@ -3,7 +3,7 @@
     
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="bower_components/unveil/jquery.unveil.min.js"></script>
     <script>
@@ -130,6 +130,10 @@
                         index -= 1;
                         console.log(trackSlide(), 'of', countSlides(index));
                         updateIndicator($slideTracker, trackSlide() + ' of ' + countSlides(index));
+                        var nextSlide = $(this).next();
+                        if(nextSlide.length){
+                            lazyLoad(nextSlide);
+                        }
                     },
                 });
             }
@@ -170,6 +174,20 @@
             function zapAnchors(){
                 $anchors.each(function(){
                     this.parentNode.removeChild(this);
+                });
+            }
+            
+            /* This is an adaptation of the FullPage lazy load function for loading the next slide */
+            
+            function lazyLoad(destiny){
+                //Lazy loading images, videos and audios
+                destiny.find('img[data-src], source[data-src], audio[data-src]').each(function(){
+                    $(this).attr('src', $(this).data('src'));
+                    $(this).removeAttr('data-src');
+            
+                    if($(this).is('source')){
+                        $(this).closest('video').get(0).load();
+                    }
                 });
             }
 
