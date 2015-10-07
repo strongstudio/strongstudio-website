@@ -27,7 +27,7 @@
     }
     ?>
     
-    <?php snippet('about'); ?>
+    <?php snippet('about', array('page' => $pages->find('about'))); ?>
     <?php snippet('clients'); ?>
     <?php //snippet('careers'); ?>
     <?php snippet('contact'); ?>

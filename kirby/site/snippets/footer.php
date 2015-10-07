@@ -10,13 +10,13 @@
         window.anchors = [
             'home',
             <?php foreach($pages as $page){
-                if($page->children()){
+                if($page->uid() == 'services' || $page->uid() == 'casestudies'){
                     foreach($page->children() as $child){
                         echo "'" . $child->uid() . "', ";
                     }
                 }
                 else{
-                    echo $page->uri();
+                    echo "'" . $page->uid() . "', ";
                 }
             } ?>
             'about',
