@@ -7,8 +7,5 @@ password: >
 language: en
 role: admin
 history:
-  - about/staff/one-last
-  - about/staff/whoever
-  - about/staff/rando
-  - about/staff/intern
+  - clients
   - about/staff/ramen
