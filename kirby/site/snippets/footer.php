@@ -46,7 +46,7 @@
                 $afterHome = $('#afterhome'),
                 scrollTop = null;
 
-            if(!Modernizr.touch){
+            if(!Modernizr.touch || window.screen.width > 960){
                 fullPageize();
             }
             else{
