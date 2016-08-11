@@ -12,11 +12,25 @@
             <?php foreach($pages as $page){
                 if($page->uid() == 'services' || $page->uid() == 'casestudies'){
                     foreach($page->children() as $child){
-                        echo "'" . $child->uid() . "', ";
+                        if(!$site->user()){
+                            if(!$child->draft()->bool()){
+                                echo "'" . $child->uid() . "', ";
+                            }
+                        }
+                        else{
+                            echo "'" . $child->uid() . "', ";
+                        }
                     }
                 }
                 else{
-                    echo "'" . $page->uid() . "', ";
+                    if(!$site->user()){
+                        if(!$page->draft()->bool()){
+                            echo "'" . $page->uid() . "', ";
+                        }
+                    }
+                    else{
+                        echo "'" . $page->uid() . "', ";
+                    }
                 }
             } ?>
             'about',

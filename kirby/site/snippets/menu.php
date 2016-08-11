@@ -7,11 +7,12 @@
 
       <?php if($p->hasVisibleChildren()): ?>
       <ul class="submenu">
-        <?php foreach($p->children()->visible() as $p): ?>
+        <?php foreach($p->children()->visible() as $p): if ($p->draft()->bool() && !$site->user()) : ?>
+        <?php else: ?>
         <li>
           <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
         </li>
-        <?php endforeach ?>
+        <?php endif; endforeach; ?>
       </ul>
       <?php endif ?>
 

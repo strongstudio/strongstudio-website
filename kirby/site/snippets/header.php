@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Strong Studio NYC LLC</title>
-        <meta name="description" content="Strong Studio NYC LLC is a conceptually driven design studio in SoHo creating identities, print, advertising, packaging, environmental, web and motion design.">
+        <meta name="description" content="Strong Studio NYC LLC is a conceptually driven design studio in lower Manhattan creating identities, print, advertising, packaging, environmental, web and motion design.">
         <meta name="keywords" content="Strong Studio Graphic Design Web">
-        <link rel="image_src" href="http://strongstudio.com/assets/images/StrongStudio_Logo_PMS_SSF.png" / ><!--formatted-->
+        <link rel="image_src" href="http://strongstudio.com/assets/images/StrongStudio_FB-crawler.jpg" / ><!--formatted-->
+        <meta property="og:image" content="http://strongstudio.com/assets/images/StrongStudio_FB-crawler.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         
         <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
@@ -42,7 +43,12 @@
                         <li><a href="#<?php echo $pages->find('casestudies')->children()->first()->uid();?>">Case Studies</a>
                             <ul class="secondary">
                                 <?php foreach ($pages->find('casestudies')->children() as $page){
-                                    echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
+                                    if($page->draft()->bool() && !$site->user()){
+                                            
+                                    }
+                                    else{
+                                        echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
+                                    }
                                 } ?>
                             </ul>
                         </li>

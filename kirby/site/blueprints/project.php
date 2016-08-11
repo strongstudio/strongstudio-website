@@ -21,3 +21,7 @@ fields:
       label: Hide Mobile
       type: checkbox
       text: Check to hide on mobile devices
+  draft:
+      label: Draft
+      type: checkbox
+      text: Hide this page from non-logged-in users?

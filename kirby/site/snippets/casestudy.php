@@ -1,3 +1,5 @@
+<?php if ($data->draft()->bool() && !$site->user()) : ?>
+<?php else: ?>
 <a class="anchorLink" name="<?php echo $data->uid(); ?>"></a>
 <div class="section  <?php echo $data->uid(); ?>" data-title="<?php echo ucfirst($data->title()->html()); ?>">
     <div class="slide section-heading" style="background: #<?php echo $data->bgcolor();?>">
@@ -48,3 +50,4 @@
         }?>
     <?php endforeach; ?>
 </div>
+<?php endif; ?>

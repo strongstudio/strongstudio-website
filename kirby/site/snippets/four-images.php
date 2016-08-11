@@ -1,3 +1,5 @@
+<?php if ($data->draft()->bool() && !$site->user()) : ?>
+<?php else: ?>
 <div class="slide  <?php if( $data->hidemobile()->bool()){ echo ' hide-mobile'; }?>" <?php if($data->image('bg.jpg')){ echo 'style="background-image: url('. $data->image('bg.jpg')->url() .')"'; }?>>
     <div class="wrapper">
         <div class="row four-up med-single-col">
@@ -15,3 +17,4 @@
         </div>
     </div>
 </div>
+<?php endif; ?>

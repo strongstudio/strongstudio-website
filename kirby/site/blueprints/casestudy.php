@@ -33,3 +33,7 @@ fields:
     results:
         label: Results
         type: textarea
+    draft:
+        label: Draft
+        type: checkbox
+        text: Hide this page from non-logged-in users?

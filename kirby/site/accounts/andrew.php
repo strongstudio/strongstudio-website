@@ -7,5 +7,8 @@ password: >
 language: en
 role: admin
 history:
+  - casestudies/pie-in-the-sky
+  - services/logos/logos2
+  - about/staff/imaginary-staffer
+  - services/logos/logos8
   - clients
-  - about/staff/ramen
