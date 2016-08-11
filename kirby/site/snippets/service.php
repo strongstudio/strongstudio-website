@@ -11,7 +11,12 @@
         </div>
     </div>
     
-    <?php foreach( $data->children()->visible() as $slide ) : ?>
+    <?php
+        $items = $site->user() ? $data->children()->visible() : $data->children()->visible()->filter(function($item){
+                return !$item->draft()->bool();
+        });
+        foreach( $items as $slide ) : 
+    ?>
         <?php if($slide->hasImages()){
             $notBG = $slide->images()->not('bg.jpg');
             if($notBG->count() > 2) snippet('four-images', array('data' => $slide));
