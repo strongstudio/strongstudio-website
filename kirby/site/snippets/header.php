@@ -33,16 +33,22 @@
                     <h3>Menu:</h3>
                     <ul class="primary">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#<?php echo $pages->find('services')->children()->first()->uid();?>">Services</a>
+                        <li><a href="#<?php $pages->find('services')->children()->first()->uid();?>">Services</a>
                             <ul class="secondary">
                                 <?php foreach ($pages->find('services')->children() as $page){
                                     echo '<li><a href="#'. $page->uid() .'">'. $page->title() .'</a></li>';
                                 } ?>
                             </ul>
                         </li>
-                        <li><a href="#<?php echo $pages->find('casestudies')->children()->first()->uid();?>">Case Studies</a>
+                        <li><a href="#<?php
+                                $items = $site->user() ? $pages->find('casestudies')->children() : $pages->find('casestudies')->children()->filter(function($item){
+                                        return !$item->draft()->bool();
+                                });
+                                echo $items->first()->uid();
+                            ?>">
+                            Case Studies</a>
                             <ul class="secondary">
-                                <?php foreach ($pages->find('casestudies')->children() as $page){
+                                <?php foreach ($items as $page){
                                     if($page->draft()->bool() && !$site->user()){
                                             
                                     }
