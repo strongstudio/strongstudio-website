@@ -11,26 +11,15 @@
             'home',
             <?php foreach($pages as $page){
                 if($page->uid() == 'services' || $page->uid() == 'casestudies'){
-                    foreach($page->children() as $child){
-                        if(!$site->user()){
-                            if(!$child->draft()->bool()){
-                                echo "'" . $child->uid() . "', ";
-                            }
-                        }
-                        else{
-                            echo "'" . $child->uid() . "', ";
-                        }
+                    $items = $site->user() ? $page->children() : $page->children()->filter(function($item){
+                            return !$item->draft()->bool();
+                    });
+                    foreach($items as $child){
+                        echo "'" . $child->uid() . "', ";
                     }
                 }
                 else{
-                    if(!$site->user()){
-                        if(!$page->draft()->bool()){
-                            echo "'" . $page->uid() . "', ";
-                        }
-                    }
-                    else{
-                        echo "'" . $page->uid() . "', ";
-                    }
+                    echo "'" . $page->uid() . "', ";
                 }
             } ?>
             'about',
