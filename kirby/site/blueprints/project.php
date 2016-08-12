@@ -4,6 +4,13 @@ title: Project
 pages: false
 files:
   sortable: true
+  fields: 
+    caption:
+        label: Caption
+        type: textarea
+    link:
+        label: Link
+        type: text
 fields:
   title:
     label: Title

@@ -505,6 +505,7 @@ body.mobile .home.section-heading{
   background-size: cover;
   background-position: center center;
   overflow: hidden;
+  position: relative;
 }
 
 .full-bleed img{
@@ -521,6 +522,12 @@ body.mobile .full-bleed img{
   min-width: 0;
   min-height: 0;
   display: block;
+}
+
+.image-caption{
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
 }
 
 .cs-title{
@@ -837,4 +844,6 @@ body.mobile .back-to-top{
 body.mobile .hide-mobile{
   display: none;
 }
+
+
 
