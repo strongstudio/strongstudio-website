@@ -2,14 +2,16 @@
 
 ![preview](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png)
 ![compatibility](https://raw.github.com/alvarotrigo/fullPage.js/master/examples/imgs/compatible.gif)
-![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.7.4-brightgreen.svg)
+
+![fullPage.js version](http://img.shields.io/badge/fullPage.js-v2.8.2-brightgreen.svg)
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 7Kb gziped!
 
 A simple and easy to use plugin to create fullscreen scrolling websites (also known as single page websites or onepage sites).
 It allows the creation of fullscreen scrolling websites, as well as adding some landscape sliders inside the sections of the site.
 
-- [Live demo](http://alvarotrigo.com/fullPage/) - [Apple demo](http://alvarotrigo.com/fullPage/examples/apple.html)
+- [Live demo](http://alvarotrigo.com/fullPage/)
+- [Wordpress theme](https://goo.gl/HuFudq)
 - [Blog Article](http://alvarotrigo.com/blog/fullpage-jquery-plugin-for-fullscreen-scrolling-websites/)
 - [Frequently Answered Questions](https://github.com/alvarotrigo/fullPage.js/wiki/FAQ---Frequently-Answered-Questions)
 
@@ -23,13 +25,22 @@ Would you like to have a website using fullpage.js functionality but you don't k
 - [Introduction](https://github.com/alvarotrigo/fullPage.js#introduction)
 - [Compatibility](https://github.com/alvarotrigo/fullPage.js#compatibility)
 - [Usage](https://github.com/alvarotrigo/fullPage.js#usage)
+  - [Creating links to sections or slides](https://github.com/alvarotrigo/fullPage.js#creating-links-to-sections-or-slides)
+  - [Creating smaller or bigger sections](https://github.com/alvarotrigo/fullPage.js#creating-smaller-or-bigger-sections)
+  - [State classes added by fullpage.js](https://github.com/alvarotrigo/fullPage.js#state-classes-added-by-fullpagejs)
+  - [Lazy loading](https://github.com/alvarotrigo/fullPage.js#lazy-loading)
+  - [Autoplay embedded media](https://github.com/alvarotrigo/fullPage.js#auto-playpause-embedded-media)
 - [Options](https://github.com/alvarotrigo/fullPage.js#options)
 - [Methods](https://github.com/alvarotrigo/fullPage.js#methods)
-- [Lazy loading](https://github.com/alvarotrigo/fullPage.js#lazy-loading)
-- [Creating smaller sections](https://github.com/alvarotrigo/fullPage.js#creating-smaller-sections)
 - [Callbacks](https://github.com/alvarotrigo/fullPage.js#callbacks)
+- [Reporting issues](https://github.com/alvarotrigo/fullPage.js#reporting-issues)
+- [Contributing to fullpage.js](https://github.com/alvarotrigo/fullPage.js#contributing-to-fullpagejs)
+- [Changelog](https://github.com/alvarotrigo/fullPage.js#changelog)
+- [Build tasks](https://github.com/alvarotrigo/fullPage.js#build-tasks)
 - [Resources](https://github.com/alvarotrigo/fullPage.js#resources)
 - [Who is using fullpage.js](https://github.com/alvarotrigo/fullPage.js#who-is-using-fullpagejs)
+- [Donations](https://github.com/alvarotrigo/fullPage.js#donations)
+- [License](https://github.com/alvarotrigo/fullPage.js#license)
 
 ## Introduction
 Suggestion are more than welcome, not only for feature requests but also for coding style improvements.
@@ -40,7 +51,7 @@ fullPage.js is fully functional on all modern browsers, as well as some old ones
 It works with browsers with CSS3 support and with the ones which don't have it, making it ideal for old browsers compatibility.
 It also provides touch support for mobile phones, tablets and touch screen computers.
 
-[![Browserstack](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack.png)](http://www.browserstack.com/)
+[![Browserstack](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/browserstack2.png)](http://www.browserstack.com/)
 
 Special thanks to [Browserstack](http://www.browserstack.com/) for supporting fullpage.js.
 
@@ -50,7 +61,7 @@ As you can see in the example files, you will need to include:
  - The JavaScript file `jquery.fullPage.js` (or its minified version `jquery.fullPage.min.js`)
  - The css file `jquery.fullPage.css`
 
- **Optionally**, you can add the [jQuery UI library](http://jqueryui.com/) in case you want to use other easing effects apart from the ones included in the jQuery library (`linear`, `swing` and `easeInOutCubic`) or the one included by default in fullPage.js (`easeInQuart`).
+ **Optionally**, when using `css3:false`, you can add the [jQuery UI library](http://jqueryui.com/) in case you want to use other easing effects apart from the ones included in the jQuery library (`linear` and `swing` ) or the one included by default in fullPage.js (`easeInOutCubic`).
 
 ### Install using bower or npm
 **Optionally**, you can install fullPage.js with bower or npm if you prefer:
@@ -75,7 +86,7 @@ npm install fullpage.js
 
 
 <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
 
 <script type="text/javascript" src="jquery.fullPage.js"></script>
 ```
@@ -85,6 +96,8 @@ If you prefer to use a CDN to load the needed files, fullPage.js is in CDNJS:
 https://cdnjs.com/libraries/fullPage.js
 
 ###Required HTML structure
+Start your HTML document with the compulsory [HTML DOCTYPE declaration](http://www.corelangs.com/html/introduction/doctype.html) on the 1st line of your HTML code. You might have troubles with sections heights otherwise. The examples provided use HTML 5 doctype `<!DOCTYPE html>`.
+
 Each section will be defined with an element containing the `section` class.
 The active section by default will be the first section, which is taken as the home page.
 
@@ -113,7 +126,6 @@ In order to create a landscape slider within a section, each slide will be defin
 ````
 You can see a fully working example of the HTML structure in the [`demoPage.html` file](https://github.com/alvarotrigo/fullPage.js/blob/master/examples/demoPage.html).
 
-
 ###Initialization
 All you need to do is call the plugin inside a `$(document).ready` function:
 
@@ -128,7 +140,7 @@ A more complex initialization with all options set could look like this:
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		//Navigation
-		menu: false,
+		menu: '#menu',
 		lockAnchors: false,
 		anchors:['firstPage', 'secondPage'],
 		navigation: false,
@@ -153,8 +165,10 @@ $(document).ready(function() {
 		continuousVertical: false,
 		normalScrollElements: '#element1, .element2',
 		scrollOverflow: false,
+		scrollOverflowOptions: null,
 		touchSensitivity: 15,
 		normalScrollElementTouchThreshold: 5,
+		bigSectionsDestination: null,
 
 		//Accessibility
 		keyboardScrolling: true,
@@ -164,7 +178,6 @@ $(document).ready(function() {
 		//Design
 		controlArrows: true,
 		verticalCentered: true,
-		resize : false,
 		sectionsColor : ['#ccc', '#fff'],
 		paddingTop: '3em',
 		paddingBottom: '10px',
@@ -221,8 +234,8 @@ Note that section anchors can also be defined in the same way, by using the `dat
 
 **Be careful!** `data-anchor` tags can not have the same value as any ID element on the site (or NAME element for IE).
 
-### Creating smaller sections
-It is possible to use sections or slides which don't take the whole viewport height resulting in smaller sections. This is ideal for footers.
+### Creating smaller or bigger sections
+[Demo](http://codepen.io/alvarotrigo/pen/BKjRYm) fullPage.js provides a way to remove the full height restriction from its sections and slides. It is possible to create sections which height is smaller or bigger thant the viewport. This is ideal for footers.
 It is important to realise that it doesn't make sense to have all of your sections using this feature. If there is more than one section in the initial load of the site, the plugin won't scroll at all to see the next one as it will be already in the viewport.
 
 To create smaller sections just use the class `fp-auto-height` in the section you want to apply it. It will then take the height defined by your section/slide content.
@@ -232,13 +245,59 @@ To create smaller sections just use the class `fp-auto-height` in the section yo
 <div class="section fp-auto-height">Auto height</div>
 ```
 
+#### Responsive auto height sections
+A responsive auto height can be applied by using the class `fp-auto-height-responsive`. This way sections will be full height until the responsive mode gets fired. 
+
+### State classes added by fullpage.js
+Fullpage.js adds multiple classes in different elements to keep a record of the status of the site:
+
+- `active` is added the current visible section and slide.
+- `active` is added to the current menu element (if using the `menu` option).
+- A class of the form `fp-viewing-SECTION-SLIDE` is added to the `body` element of the site. (eg: [`fp-viewing-secondPage-0`](http://alvarotrigo.com/fullPage/#secondPage)) The `SECTION` and `SLIDE` parts will be the anchors (or indexes if no anchor is provided) of the current section and slide.
+- `fp-responsive` is added to the `body` element when the entering in the responsive mode
+- `fp-enabled` is added to the `html` element when fullpage.js is enabled. (and removed when destroyed).
+- `fp-destroyed` is added to the fullpage.js container when the plugin is destroyed.
+- `fp-enabled` is added to the `html` element once the libary is initalized. 
+
+###Lazy Loading
+[Demo](http://codepen.io/alvarotrigo/pen/eNLBXo) fullPage.js provides a way to lazy load images, videos and audio elements so they won't slow down the loading of your site or unnecessarily waste data transfer.
+When using lazy loading, all these elements will only get loaded when entering in the viewport.
+To enable lazy loading all you need to do is change your `src` attribute to `data-src` as shown below:
+
+```
+<img data-src="image.png">
+<video>
+	<source data-src="video.webm" type="video/webm" />
+	<source data-src="video.mp4" type="video/mp4" />
+</video>
+ ```
+
+###Auto play/pause embedded media
+
+#### Play on section/slide load:
+Using the attribute `autoplay` for videos or audio, or the param `autoplay=1` for youtube iframes will result in the media element playing on page load. 
+In order to play it on section/slide load use instead the attribute `data-autoplay`. For example:
+
+```html
+<audio data-autoplay>
+	<source src="http://metakoncept.hr/horse.ogg" type="audio/ogg">
+</audio>
+```
+
+#### Pause on leave
+Embedded HTML5 `<video>` / `<audio>`  and Youtube iframes are automatically paused when you navigate away from a section or slide. This can be disabled by using the attribute `data-keepplaying`. For example: 
+```html
+<audio data-keepplaying>
+	<source src="http://metakoncept.hr/horse.ogg" type="audio/ogg">
+</audio>
+```
+
+
 ## Options
 
 - `controlArrows`: (default `true`) Determines whether to use control arrows for the slides to move right or left.
 
 - `verticalCentered`: (default `true`) Vertically centering of the content within sections. When set to `true`, your content will be wrapped by the plugin. Consider using delegation or load your other scripts in the `afterRender` callback.
-
-- `resize`: (default `false`) Whether you want to resize the text when the window is resized.
 
 - `scrollingSpeed`: (default `700`) Speed in milliseconds for the scrolling transitions.
 
@@ -289,6 +348,8 @@ the fitting by the configured milliseconds.
 
 - `normalScrollElementTouchThreshold` : (default `5`) Defines the threshold for the number of hops up the html node tree Fullpage will test to see if `normalScrollElements` is a match to allow scrolling functionality on divs on a touch device. (For example: `normalScrollElementTouchThreshold: 3`)
 
+- `bigSectionsDestination`: (default `null`) Defines how to scroll to a section which size is bigger than the viewport. By default fullPage.js scrolls to the top if you come from a section above the destination one and to the bottom if you come from a section below the destination one. Possible values are `top`, `bottom`, `null`.
+
 - `keyboardScrolling`: (default `true`) Defines if the content can be navigated using the keyboard
 
 - `touchSensitivity`: (default `5`) Defines a percentage of the browsers window width/height, and how far a swipe must measure for navigating to the next section / slide
@@ -331,21 +392,23 @@ $('#fullpage').fullpage({
 
 - `slidesNavPosition`: (default `bottom`) Defines the position for the landscape navigation bar for sliders. Admits `top` and `bottom` as values. You may want to modify the CSS styles to determine the distance from the top or bottom as well as any other style such as color.
 
-- `scrollOverflow`: (default `false`) defines whether or not to create a scroll for the section in case its content is bigger than the height of it. When set to `true`, your content will be wrapped by the plugin. Consider using delegation or load your other scripts in the `afterRender` callback.
-In case of setting it to `true`, it requires the vendor plugin [`jquery.slimscroll.min`](https://github.com/rochal/jQuery-slimScroll) and it should be loaded before the fullPage.js plugin. For example:
+- `scrollOverflow`: (default `false`) defines whether or not to create a scroll for the section/slide in case its content is bigger than the height of it. When set to `true`, your content will be wrapped by the plugin. Consider using delegation or load your other scripts in the `afterRender` callback.
+In case of setting it to `true`, it requires the vendor library [`scrolloverflow.min.js`](https://github.com/alvarotrigo/fullPage.js/blob/master/vendors/scrolloverflow.min.js) and it should be loaded before the fullPage.js plugin. For example:
 
 ```html
-<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
 <script type="text/javascript" src="jquery.fullPage.js"></script>
 ```
+
+- `scrollOverflowOptions`: when using scrollOverflow:true fullpage.js will make use of a forked and modified version of [iScroll.js libary](https://github.com/cubiq/iscroll/). You can customize the scrolling behaviour by providing fullpage.js with the iScroll.js options you want to use. Check [its documentation](http://iscrolljs.com/) for more info.
 
 - `sectionSelector`: (default `.section`) Defines the jQuery selector used for the plugin sections. It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js..
 
 - `slideSelector`: (default `.slide`)  Defines the jQuery selector used for the plugin slides.  It might need to be changed sometimes to avoid problem with other plugins using the same selectors as fullpage.js.
 
-- `responsiveWidth`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
+- `responsiveWidth`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined width in pixels. A class `fp-responsive` is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's width is less than 900 the plugin will scroll like a normal site.
 
-- `responsiveHeight`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined height in pixels. A class `fp-responsive` is added to the plugin's container in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.
+- `responsiveHeight`: (default `0`)  A normal scroll (`autoScrolling:false`) will be used under the defined height in pixels. A class `fp-responsive` is added to the body tag in case the user wants to use it for his own responsive CSS. For example, if set to 900, whenever the browser's height is less than 900 the plugin will scroll like a normal site.
 
 ## Methods
 You can see them in action [here](http://alvarotrigo.com/fullPage/examples/methods.html)
@@ -474,7 +537,7 @@ $.fn.fullpage.setScrollingSpeed(700);
 ---
 ### destroy(type)
 [Demo](http://codepen.io/alvarotrigo/pen/bdxBzv) Destroys the plugin events and optionally its HTML markup and styles.
-Ideal to use when using AJAX to load content. ()
+Ideal to use when using AJAX to load content.
 
 - `type`: can be empty or `all`. If `all` is passed, the HTML markup and styles used by fullpage.js will be removed. This way the original HTML markup, the one used before any plugin modification is made, will be maintained.
 
@@ -488,24 +551,15 @@ $.fn.fullpage.destroy('all');
 ---
 ### reBuild()
 Updates the DOM structure to fit the new window size or its contents.
-Ideal to use in combination with AJAX calls or external changes in the DOM structure of the site.
+ Ideal to use in combination with AJAX calls or external changes in the DOM structure of the site, specially when using `scrollOverflow:true`.
 
 ```javascript
 $.fn.fullpage.reBuild();
 ```
+---
+### setResponsive(boolean)
+[Demo](http://codepen.io/alvarotrigo/pen/WxOyLA) Sets the responsive mode of the page. When set to `true` the autoScrolling will be turned off and the result will be exactly the same one as when the `responsiveWidth` or `responsiveHeight` options  get fired.
 
-##Lazy Loading
-[Demo](http://codepen.io/alvarotrigo/pen/eNLBXo) fullPage.js provides a way to lazy load images, videos and audio elements so they won't slow down the loading of your site or unnecessarily waste data transfer.
-When using lazy loading, all these elements will only get loaded when entering in the viewport.
-To enable lazy loading all you need to do is change your `src` attribute to `data-src` as shown below:
-
-```
-<img data-src="image.png">
-<video>
-	<source data-src="video.webm" type="video/webm" />
-	<source data-src="video.mp4" type="video/mp4" />
-</video>
- ```
 
 ## Callbacks
 [Demo](http://codepen.io/alvarotrigo/pen/XbPNQv) You can see them in action [here](http://alvarotrigo.com/fullPage/examples/callbacks.html).
@@ -682,13 +736,32 @@ Example:
 ```
 
 ####Cancelling a move before it takes place
-You can cancel a move by returning `false` on the `onSlideLeave` callback. Same as with `onLeave`.
+You can cancel a move by returning `false` on the `onSlideLeave` callback. [Same as when canceling a movement with `onLeave`](https://github.com/alvarotrigo/fullPage.js#cancelling-the-scroll-before-it-takes-place).
+
+#Reporting issues
+1. Please, look for your issue before asking using the github issues search.
+2. Make sure you use the latest fullpage.js version. No support is provided for older versions.
+3. Use the [the Github Issues forum](https://github.com/alvarotrigo/fullPage.js/issues) for create issues.
+4. **An isolated reproduction of the issue will be required.** Make use of [jsfiddle](http://jsfiddle.net/97tbk/418/) or [codepen](http://codepen.io/alvarotrigo/pen/NxyPPp) for it if possible.
+
+#Contributing to fullpage.js
+Please see [Contributing to fullpage.js](https://github.com/alvarotrigo/fullPage.js/wiki/Contributing-to-fullpage.js)
+
+#Changelog
+To see the list of recent changes, see [Releases section](https://github.com/alvarotrigo/fullPage.js/releases).
+
+#Build tasks
+Want to build fullpage.js distribution files? Please see [Build Tasks](https://github.com/alvarotrigo/fullPage.js/wiki/Build-tasks)
 
 #Resources
+- [Wordpress theme](https://goo.gl/HuFudq)
 - [CSS Easing Animation Tool - Matthew Lein](http://matthewlein.com/ceaser/) (useful to define the `easingcss3` value)
 - [fullPage.js jsDelivr CDN](http://www.jsdelivr.com/#!jquery.fullpage)
 - [fullPage.js plugin for October CMS](http://octobercms.com/plugin/freestream-parallax)
 - [fullPage.js wordpress plugin](https://wordpress.org/plugins/wp-fullpage/)
+- [fullPage.js Angular2 directive](https://github.com/meiblorn/ng2-fullpage)
+- [fullPage.js angular directive](https://github.com/hellsan631/angular-fullpage.js)
+- [Angular fullPage.js - Adaptation for Angular.js v1.x](https://github.com/mmautomatizacion/angular-fullpage.js)
 - [Integrating fullPage.js with Wordpress (Tutorial)](http://premium.wpmudev.org/blog/build-apple-inspired-full-page-scrolling-pages-for-your-wordpress-site/)
 
 ## Who is using fullPage.js
@@ -698,44 +771,39 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
 [![Sony](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sony.gif)](http://www.sony-asia.com/microsite/mdr-10/)
 ![Vodafone](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/vodafone.png)
 [![British Airways](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/british-airways-fullpage.gif)](http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins)
+[![McDonalds](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/mcdonalds.png)](https://mcdonalds.com.au/create-your-taste)
 [![EA](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/ea.png)](http://www.battlefield.com/)
 [![Mi](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/mi.png)](http://www.mi.com/shouhuan)
 [![scribe](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/scribe.png)](http://usescribe.com/)
-[![matrimonia](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/matrimonia.png)](http://www.matrimonia.rs/)
-[![redd](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/redd.png)](http://www.getredd.com/)
 [![redd](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/sym.png)](http://www.sanyang.com.tw/service/Conception/)
+[![Bugatti](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/bugatti.gif)](http://www.bugatti.com/veyron/veyron-164/)
+[![Bugatti](http://wallpapers-for-ipad.com/fullpage/imgs3/logos/edarling.png)](https://www.edarling.de/)
 
 - http://www.britishairways.com/en-gb/information/travel-classes/experience-our-cabins
 - http://www.sony-asia.com/microsite/mdr-10/
-- http://www.saltaboombox.com.ar
 - http://www.yourprimer.com/
-- http://www.battlefield.com/
+- http://mcdonalds.com.au/create-your-taste
+- http://burntmovie.com/
+- http://essenso.com/
+- http://www.bugatti.com/veyron/veyron-164/
 - http://www.kibey.com/
 - http://www.newjumoconcept.com/
+- http://www.shootinggalleryasia.com/
 - http://medoff.ua/en/
 - http://promo.prestigio.com/grace1/
 - http://www.mi.com/shouhuan
 - https://moneytree.jp/
 - http://torchbrowser.com/
-- http://leafcutter.com.au/
 - http://thekorner.fr/
-- http://ymcadc.org/AnnualReport/
 - http://www.restaurantwoods.nl/
+- https://www.edarling.de/
 - http://urban-walks.com/
 - http://lingualeo.com/
-- http://www.getikto.com/
 - http://charlotteaimes.com/
 - http://collection.madeofsundays.com
 - http://thiswasmybest.com/
-- http://jacoberiksson.se/
 - http://www.boxreload.com/
-- https://cloudmagic.com/
-- http://www.dividendsolar.com/
-- http://www.thespecialists.be
-- http://brianingle.webflow.com/
 - http://lawinenstift.com/
-- http://wtfdesign.pl/
-- http://www.swenk.me/
 - http://duis.co/
 - http://educationaboveall.org/
 - http://camfindapp.com/
@@ -744,49 +812,34 @@ If you want your page to be listed here. Please <a href="mailto:alvaro@alvarotri
 - http://wantnova.com/
 - http://usescribe.com/
 - http://lucilecazanave.com/
-- http://overallstudio.co.il/
 - http://boxx.hk/
-- http://medlive.com
 - http://bearonunicycle.com/
 - http://rawmilk.dk/en/
-- http://www.nearpod.com/
 - http://www.famavolat.com/
-- http://www.carpetloverclub.net/
+- http://www.carpetloverclub.com/
 - http://www.sanyang.com.tw/service/Conception/
 - http://www.batzaya.net/
 - http://www.graphicid.dk/
-- http://hed.citinet.pro/
-- http://www.jukstapoz.com/
 - http://portfolio.io.utwente.nl/student/dijkavan/
-- http://www.omqcomics.com/
 - http://www.carlphot.com/
 - http://medissix.com/
 - http://trasmissione-energia.terna.it/
 - http://www.thefoodmovie.com/
 - http://www.villareginateodolinda.it
 - http://www.kesstrio.com
-- http://willontheway.com/
 - http://www.karmaffne.com/
 - http://fossdistillery.is
 - http://www.conversionculture.com/
 - http://ded-morozz.kiev.ua/
-- http://www.fergalkeenan.com
-- http://spell-star.appspot.com/
 - http://yizeng.me/
-- http://neolearning.eu/
 - http://unabridgedsoftware.com/
 - http://wc2014.plnwrx.com/
 - http://organice.io/
-- http://alchemy-research.com/
-- http://www.cima-ecuador.com/
 - http://atlanticcorp.us/
 - http://moysport.ru/
-- http://www.norttilaakso.fi/
 - http://wcfixtures.co.uk/
 - http://www.dopehustleinc.com/default.php
 - http://themify.me/demo/#theme=fullpane
-- http://bragdonfarm.com/
-- http://www.paperdeermusic.com/
 - http://dancingroad.com
 - http://www.camanihome.com/
 - http://www.exapoint.ch/
@@ -802,6 +855,8 @@ Donations would be more than welcome :)
 
 
 ## License
+
+**The credit comments in the JavaScript and CSS files should be kept intact** (even after combination or minification )
 
 (The MIT License)
 

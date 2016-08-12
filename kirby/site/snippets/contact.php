@@ -22,6 +22,6 @@
         <a class="back-to-top" href="#home"><img style="width: 47px; height: 47px" src="assets/images/arrow-back-to-top.svg"></a>
         
     </div>
-    <span class="copyright">&copy; 2015 Strong Studio LLC. All Rights Reserved<br></span>
+    <span class="copyright">&copy; 2016 Strong Studio LLC. All Rights Reserved<br></span>
 
 </div>
