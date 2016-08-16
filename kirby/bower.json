@@ -1,0 +1,26 @@
+{
+  "name": "strongstudio.com",
+  "version": "0.0.9",
+  "authors": [
+    "andosteinmetz <ando.steinmetz@gmail.com>"
+  ],
+  "description": "website for strong studio",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "http://strongstudio.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": null,
+    "modernizr": null,
+    "unveil": null,
+    "waypoints": null
+  }
+}
