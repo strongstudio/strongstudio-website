@@ -42,25 +42,31 @@
         <div class="wrapper">
             <div class="row med-single-col">
                 <div class="col one-of-two">
-    <?php foreach($page->find('staff')->children() as $staff) : ?>
+    <?php foreach($page->find('staff')->children()->visible() as $staff) : ?>
                     <div class="staff <?php echo $staff->uid(); ?>">
-                    <div class="row">
-                        <div class="col staff-image">
-                            <div class="headshot" <?php if($image = $staff->image()){echo 'style="background-image: url('. $image->url() .')"';} ?>></div>
+                        <div class="row">
+                            <div class="col staff-image">
+                                <div class="headshot" <?php if($image = $staff->image()){echo 'style="background-image: url('. $image->url() .')"';} ?>></div>
+                            </div>
+                            <div class="col bio">
+                                <header>
+                                    <h3><?php echo $staff->name(); ?></h3>
+                                    <span class="title"><?php echo $staff->position(); ?></span>
+                                </header>
+                                <?php echo $staff->bio()->kirbytext(); ?>
+                            </div>
                         </div>
-                        <div class="col bio">
-                            <header>
-                                <h3><?php echo $staff->name(); ?></h3>
-                                <span class="title"><?php echo $staff->position(); ?></span>
-                            </header>
-                            <?php echo $staff->bio()->kirbytext(); ?>
-                        </div>
-                    </div>
                     </div>
                     <?php if($staff->num() % 2 == 0 && $staff->num() % 4 != 0 ) : ?>
                 </div>
                 <div class="col one-of-two">
-    <?php elseif($staff->num() % 4 == 0 || $staff->hasNext() == False) :?>
+                <?php if(!$staff->hasNextVisible()) :?>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <?php endif; ?>
+    <?php elseif($staff->num() % 4 == 0 || $staff->hasNextVisible() == False) :?>
                     </div>
                     </div>
             </div>

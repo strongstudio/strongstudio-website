@@ -3,12 +3,13 @@
 username: andrew
 email: ando.steinmetz@gmail.com
 password: >
-  $2a$10$iq6iTAuZewcKbonJ4TgAHeoVH9NVSikP65Om04qf6G598zVxgMjC.
+  $2a$10$XmpY073RH.lwDZON1WXTMeLtquFXIaJhmsHAxALjKrl6OtS1wsAs6
 language: en
 role: admin
+firstname:
+lastname:
 history:
+  - about/staff/john
+  - about/staff
+  - about/staff/risa
   - casestudies/pie-in-the-sky
-  - services/logos/logos2
-  - about/staff/imaginary-staffer
-  - services/logos/logos8
-  - clients
