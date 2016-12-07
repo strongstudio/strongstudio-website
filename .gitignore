@@ -8,3 +8,4 @@ source_files
 .idea
 .sass-cache
 kirby/content_old
+kirby/site/accounts

@@ -60,7 +60,7 @@
                         </li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#clients">Clients</a></li>
-                        <!--<li><a href="#careers">Careers</a></li>-->
+                        <li><a href="#careers">Careers</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </section>
