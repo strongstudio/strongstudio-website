@@ -19,11 +19,13 @@
                 <div class="col one-of-two">
                     <div class="job-description">
                         <h3><?php echo $position->title(); ?></h3>
-                        <p><?php echo $position->description()->kirbytext(); ?></p>
+                        <div><?php echo $position->description()->kirbytext(); ?></div>
                         <h4><?php echo $position->requirements_heading(); ?>:</h4>
                         <div><?php echo $position->requirements()->kirbytext(); ?></div>
-                        <h4>Bonus Points:</h4>
+                        <?php if(!$position->bonus_points()->empty()): ?><h4>Bonus Points:</h4><?php endif; ?>
                         <div><?php echo $position->bonus_points()->kirbytext(); ?></div>
+                        <h4>How to Apply</h4>
+                        <div class="how-to-apply">Send your resume and portfolio to <a href="mailto:work@strongstudio.com">work@strongstudio.com</a></div>
                     </div>
                 </div>
                 <?php if( !$position->hasNextVisible() ): ?>

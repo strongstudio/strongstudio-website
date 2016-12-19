@@ -10,6 +10,7 @@
         
         <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css">
         <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="stylesheets/strongstudio-temp-styles.css">
     </head>
     <body>
         <header id="page-header">
