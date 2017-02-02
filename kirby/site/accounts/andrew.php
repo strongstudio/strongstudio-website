@@ -10,7 +10,6 @@ firstname: ""
 lastname: ""
 history:
   - careers/hiring/web-design
-  - careers/hiring/web-development
   - careers/hiring/design-internships
   - about/staff/john
   - about/staff

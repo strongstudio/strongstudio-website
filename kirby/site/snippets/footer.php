@@ -28,8 +28,6 @@
             'contact'
         ];
         
-    </script>
-    <script>
         $(document).ready(function() {
             var $window = $(window),
                 $body = $('body'),
@@ -142,7 +140,12 @@
             }
 
             function toggleNav(){
-                $mainNav.hasClass('hidden') ? $mainNav.removeClass('hidden') : $mainNav.addClass('hidden');
+                if($mainNav.hasClass('hidden')){
+                    $mainNav.removeClass('hidden');
+                }
+                else{
+                    $mainNav.addClass('hidden');
+                }
                 $toggleButton.toggleClass('close');
             }
 
